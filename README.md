@@ -1,5 +1,5 @@
 # Pa-2
-This is the git for Pa-2!
+This is the git for Pa-2! <br/>
 Please make your changes in the branches with your name.
 Beta is to merge and test the changes
 Main is the branch that will be send out to release. 
