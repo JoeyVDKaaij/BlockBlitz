@@ -1,22 +1,29 @@
 using System;                                   // System contains a lot of default C# libraries 
 using GXPEngine;                                // GXPEngine contains the engine
 using System.Drawing;                           // System.Drawing contains drawing tools such as Color definitions
+using System.Collections.Generic;
 
 public class MyGame : Game {
-	public MyGame() : base(800, 600, false)     // Create a window that's 800x600 and NOT fullscreen
-	{
-		// Draw some things on a canvas:
-		EasyDraw canvas = new EasyDraw(800, 600);
-		canvas.Clear(Color.MediumPurple);
-		canvas.Fill(Color.Yellow);
-		canvas.Ellipse(width / 2, height / 2, 200, 200);
-		canvas.Fill(50);
-		canvas.TextSize(32);
-		canvas.TextAlign(CenterMode.Center, CenterMode.Center);
-		canvas.Text("Welcome!", width / 2, height / 2);
 
-		// Add the canvas to the engine to display it:
-		AddChild(canvas);
+	Player player;
+	List<Ground> ground;
+
+	public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, false, false, -1, -1, true)
+	{
+		player = new Player();
+
+		ground = new List<Ground>();
+
+		ground.Add(new Ground());
+
+		// NEED TO LOOK INTO THIS LATER
+		//ground.ForEach(x => AddChild(ground[x]));
+
+		
+
+		//ground.Find();
+        AddChild(player);
+
 		Console.WriteLine("MyGame initialized");
 	}
 
