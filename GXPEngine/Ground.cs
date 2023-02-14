@@ -15,13 +15,13 @@ public class Ground : Sprite
         height = DesignerClass.groundHeight;
         x = pX;
         y = DesignerClass.wHeight - height;
-        Console.WriteLine("Ground Created");
     }
 
     void Update()
     {
-        x--;
-        if (x < 0)
+        x -= 1;
+
+        if (x + width < 0)
         {
             GroundSpawnEvent.Invoke();
             LateDestroy();
