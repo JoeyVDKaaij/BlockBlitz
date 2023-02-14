@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 public class Player : AnimationSpriteAddOn
 {
-    public Player() : base(ArtistClass.player, 7, 1, -1, false, true)
+    public Player() : base(ArtistClass.playerFileName, ArtistClass.playerColumn, ArtistClass.playerRow, -1, false, true)
     {
         width = 50;
         height = 50;

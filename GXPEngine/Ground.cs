@@ -7,15 +7,24 @@ using System.Threading.Tasks;
 
 public class Ground : Sprite
 {
-    public Ground() : base("square.png", false, true) 
+    public event Action GroundSpawnEvent;
+
+    public Ground(int pX) : base(ArtistClass.groundFileName, false, true)
     {
-        height = 50;
-        width = 50;
+        width = DesignerClass.groundWidth;
+        height = DesignerClass.groundHeight;
+        x = pX;
         y = DesignerClass.wHeight - height;
+        Console.WriteLine("Ground Created");
     }
 
     void Update()
     {
-
+        x--;
+        if (x < 0)
+        {
+            GroundSpawnEvent.Invoke();
+            LateDestroy();
+        }
     }
 }

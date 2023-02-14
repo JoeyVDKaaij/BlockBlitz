@@ -8,20 +8,31 @@ public class MyGame : Game {
 	Player player;
 	List<Ground> ground;
 
-	public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, false, false, -1, -1, true)
+	public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, true)
 	{
 		player = new Player();
-
+		
 		ground = new List<Ground>();
 
-		ground.Add(new Ground());
+        for (int i = 0; i < width / DesignerClass.groundWidth; i++)
+		{
+			ground.Add(new Ground(0));
+		}
 
-		// NEED TO LOOK INTO THIS LATER
-		//ground.ForEach(x => AddChild(ground[x]));
-
+        int groundId = 0;
+        foreach (Ground x in ground)
+		{
+			x.GroundSpawnEvent += Ground_GroundSpawnEvent;
+            x.x += 50 * groundId;
+			AddChild(x);
+			Console.WriteLine("Hello");
+			groundId++;
+		}
+		groundId = 0;
 		
 
-		//ground.Find();
+
+        //ground.Find();
         AddChild(player);
 
 		Console.WriteLine("MyGame initialized");
@@ -32,7 +43,12 @@ public class MyGame : Game {
 		// Empty
 	}
 
-	static void Main()                          // Main() is the first method that's called when the program is run
+    private void Ground_GroundSpawnEvent()
+    {
+        ground.Add(new Ground(width));
+    }
+
+    static void Main()                          // Main() is the first method that's called when the program is run
 	{
 		new MyGame().Start();                   // Create a "MyGame" and start it
 	}
