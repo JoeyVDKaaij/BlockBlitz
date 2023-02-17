@@ -9,6 +9,7 @@ using GXPEngine.Core;
 public class PlaceHolder : Sprite
 {
     public event Action PlaceHolderReplaceWithBlockEvent;
+    public event Action PlaceHolderDestroyEvent;
 
     public PlaceHolder(int pX, int pY) : base("checkers.png", false, true)
     {
@@ -20,13 +21,15 @@ public class PlaceHolder : Sprite
 
     void Update()
     {
+        /*
         Collision placeHolder = MoveUntilCollision(-1, 0);
 
         if (x + width < 0)
         {
-            LateDestroy();
+            PlaceHolderDestroyEvent.Invoke();
         }
 
         if (ControlClass.up) PlaceHolderReplaceWithBlockEvent.Invoke();
+        */
     }
 }

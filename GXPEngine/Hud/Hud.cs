@@ -19,9 +19,11 @@ public class Hud : EasyDraw
 
     void Update()
     {
+        /*
         Clear(Color.Black);
         Text("Score: " + score, 50, 50);
         currentScore++;
         score = currentScore / 5;
+        */
     }
 }

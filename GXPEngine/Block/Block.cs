@@ -7,11 +7,26 @@ using GXPEngine;
 
 public class Block : Sprite
 {
-    public Block(int pX, int pY) : base("colors.png", false, true)
+
+    public event Action BlockDestroyEvent;
+
+    public Block(float pX, float pY) : base("colors.png", false, true)
     {
         width = DesignerClass.groundWidth;
         height = DesignerClass.groundHeight;
         x = pX;
-        y = DesignerClass.wHeight - height * DesignerClass.groundCountDefault + pY * height;
+        y = pY;
+    }
+
+    void Update()
+    {
+        /*
+        x--;
+
+        if (x + width < 0)
+        {
+            BlockDestroyEvent.Invoke();
+        }
+        */
     }
 }
