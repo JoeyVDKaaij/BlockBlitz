@@ -4,27 +4,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TiledMapParser;
 
-public class Ground : Sprite
+public class Ground : AnimationSpriteAddOn
 {
     public event Action GroundSpawnEvent;
+    public event Action BlockObstacleSpawnEvent;
+    public event Action GroundDestroyEvent;
 
-    public Ground(int pX) : base(ArtistClass.groundFileName, false, true)
+    public static bool spawnObstacle = false;
+    private int obstacle = 0;
+    public static int abilityToSpawnCooldown = 2;
+    public static bool canSpawnObstacle = true;
+    private double xSpeed = 1;
+
+    public Ground(string fileName, int colums, int rows, TiledObject groundObject = null) : base(fileName, colums, rows, -1, false, true)
     {
-        width = DesignerClass.groundWidth;
-        height = DesignerClass.groundHeight;
-        x = pX;
-        y = DesignerClass.wHeight - height;
+        if (groundObject != null)
+        {
+            
+        }
     }
 
     void Update()
     {
-        x -= 1;
-
+        x -= (float)xSpeed;
+        xSpeed += DesignerClass.XSpeedUp;
+        /*
         if (x + width < 0)
         {
-            GroundSpawnEvent.Invoke();
+            if (y >= DesignerClass.wHeight - height && spawnObstacle)
+            {
+                if (obstacle == 0)
+                {
+                    BlockObstacleSpawnEvent.Invoke();
+                    abilityToSpawnCooldown--;
+                }
+            }
+            else if (y >= DesignerClass.wHeight - height)
+            {
+                GroundSpawnEvent.Invoke();
+            }
+
             LateDestroy();
+
+            if (abilityToSpawnCooldown == 0) spawnObstacle = false;
         }
+
+        if (Hud.score % 100 == 1 && Hud.score > 80 && canSpawnObstacle)
+        {
+            spawnObstacle = true;
+            abilityToSpawnCooldown = 2;
+        }
+        */
     }
 }
