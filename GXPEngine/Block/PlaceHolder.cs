@@ -13,8 +13,14 @@ public class PlaceHolder : AnimationSpriteAddOn
     public event Action PlaceHolderDestroyEvent;
     private double xSpeed = 1;
 
-    public PlaceHolder(string fileName, int colums, int rows, TiledObject groundObject = null) : base(fileName, colums, rows, -1, false, true)
+    private int currentObstacle;
+
+    public PlaceHolder(string fileName, int colums, int rows, TiledObject placeHolderObject = null) : base(fileName, colums, rows, -1, false, true)
     {
+        if (placeHolderObject != null)
+        {
+            currentObstacle = placeHolderObject.GetIntProperty("Block selection");
+        }
         width = DesignerClass.groundWidth;
         height = DesignerClass.groundHeight;
         //x = pX;
@@ -25,6 +31,11 @@ public class PlaceHolder : AnimationSpriteAddOn
     {
         x -= (float)xSpeed;
         xSpeed += DesignerClass.XSpeedUp;
+
+        if (ControlClass.up)
+        {
+            
+        }
         /*
         Collision placeHolder = MoveUntilCollision(-1, 0);
 
