@@ -45,6 +45,7 @@
     <Compile Include="Designer_Artist_Files\ArtistClass.cs" />
     <Compile Include="Designer_Artist_Files\ControlClass.cs" />
     <Compile Include="Designer_Artist_Files\DesignerClass.cs" />
+    <Compile Include="EndPoint.cs" />
     <Compile Include="Ground.cs" />
     <Compile Include="GXPEngine Plugin\AnimationSpriteAddOn.cs" />
     <Compile Include="GXPEngine\AddOns\Gizmos.cs" />

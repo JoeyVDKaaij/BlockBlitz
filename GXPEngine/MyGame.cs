@@ -10,6 +10,7 @@ public class MyGame : Game {
 	List<PlaceHolder> placeHolder;
 	List<Block> block;
 	Hud hud;
+    EndPoint endPoint;
 
     public static bool currentObstacleOnScreen = false;
 
@@ -31,19 +32,20 @@ public class MyGame : Game {
         //playerData = new PlayerData();
         LoadLevel(startLevel);
         OnAfterStep += CheckLoadLevel;
+        EndPoint.EndLevelEvent += EndPoint_EndPointEndLevelEvent;
 
         // Initialize the classes
         //player = new Player();
-		
-		ground = new List<Ground>();
+
+        ground = new List<Ground>();
 
         placeHolder = new List<PlaceHolder>();
         block = new List<Block>();
 
 		hud = new Hud();
 
-		// Create the ground
-		for (int i = 0; i < (width / DesignerClass.groundWidth) + 1; i++)
+        // Create the ground
+        for (int i = 0; i < (width / DesignerClass.groundWidth) + 1; i++)
 		{
             for (int j = 0; j < DesignerClass.groundCountDefault; j++)
             {
@@ -155,6 +157,11 @@ public class MyGame : Game {
     }
     */
 
+    private void EndPoint_EndPointEndLevelEvent()
+    {
+        ResetCurrentLevel();
+    }
+
     void DestroyAll()
     {
         List<GameObject> children = GetChildren();
@@ -175,11 +182,11 @@ public class MyGame : Game {
             levelToLoad = null;
         }
     }
-    public void LoadLevel(string filename, string soundFile = "BackgroundMusic.ogg")
+    public void LoadLevel(string filename, int currentLevelSoundTrack = 0)
     {
         if (backgroundMusicSC != null)
             backgroundMusicSC.Stop();
-        //Sound backgroundMusic = new Sound(soundFile);
+        //Sound backgroundMusic = new Sound(DesignerClass.levelSoundTrack[currentLevelSoundTrack]);
         //backgroundMusicSC = backgroundMusic.Play();
         levelToLoad = filename;
         currentLevel = filename;
@@ -190,7 +197,8 @@ public class MyGame : Game {
         DestroyAll();
         //playerData.Reset();
         AddChild(new Level(currentLevel));
-        AddChild(hud);
+        AddChild(new Hud());
+        AddChild(new ControlClass());
     }
 
     static void Main()                          // Main() is the first method that's called when the program is run

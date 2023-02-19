@@ -22,9 +22,16 @@ public class DesignerClass
     // Ground Variables
     public const int groundWidth = 50;
     public const int groundHeight = 50;
-    
+
     // How many grounds from the bottom of the screen are there at default
     public const int groundCountDefault = 3;
+
+    // How much faster the ground goes per pixel each frame
+    public const double groundXSpeedUp = 0.001;
+
+    // Add the songs for each level in this array (if two songs are the same name the same file twice)
+    // Doesn't work yet
+    public static string[] levelSoundTrack = { "", "", "" };
 
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }

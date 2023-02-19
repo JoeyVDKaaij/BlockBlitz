@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="75" height="75" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="37">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="75" height="75" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="83">
  <tileset firstgid="1" name="square" tilewidth="64" tileheight="64" tilecount="1" columns="1">
   <image source="square.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="2" name="circle" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="circle.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="3" name="checkers" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="checkers.png" width="64" height="64"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" width="75" height="75">
   <data encoding="csv">
@@ -122,5 +128,55 @@
   <object id="33" class="Ground" gid="1" x="832" y="2336" width="64" height="64"/>
   <object id="34" class="Ground" gid="1" x="960" y="2336" width="64" height="64"/>
   <object id="35" class="Ground" gid="1" x="960" y="2400" width="64" height="64"/>
+  <object id="37" class="Ground" gid="1" x="1024" y="2400" width="64" height="64"/>
+  <object id="38" class="Ground" gid="1" x="1088" y="2400" width="64" height="64"/>
+  <object id="39" class="Ground" gid="1" x="1152" y="2400" width="64" height="64"/>
+  <object id="40" class="Ground" gid="1" x="1216" y="2400" width="64" height="64"/>
+  <object id="41" class="Ground" gid="1" x="1280" y="2400" width="64" height="64"/>
+  <object id="42" class="Ground" gid="1" x="1344" y="2400" width="64" height="64"/>
+  <object id="43" class="Ground" gid="1" x="1408" y="2400" width="64" height="64"/>
+  <object id="44" class="Ground" gid="1" x="1472" y="2400" width="64" height="64"/>
+  <object id="45" class="Ground" gid="1" x="1536" y="2400" width="64" height="64"/>
+  <object id="46" class="Ground" gid="1" x="1600" y="2400" width="64" height="64"/>
+  <object id="47" class="Ground" gid="1" x="1664" y="2400" width="64" height="64"/>
+  <object id="48" class="Ground" gid="1" x="1728" y="2400" width="64" height="64"/>
+  <object id="49" class="Ground" gid="1" x="1792" y="2400" width="64" height="64"/>
+  <object id="50" class="Ground" gid="1" x="1856" y="2400" width="64" height="64"/>
+  <object id="51" class="Ground" gid="1" x="1920" y="2400" width="64" height="64"/>
+  <object id="52" class="Ground" gid="1" x="1984" y="2400" width="64" height="64"/>
+  <object id="53" class="Ground" gid="1" x="2048" y="2400" width="64" height="64"/>
+  <object id="54" class="Ground" gid="1" x="2112" y="2400" width="64" height="64"/>
+  <object id="55" class="Ground" gid="1" x="2176" y="2400" width="64" height="64"/>
+  <object id="56" class="Ground" gid="1" x="2240" y="2400" width="64" height="64"/>
+  <object id="57" class="Ground" gid="1" x="2304" y="2400" width="64" height="64"/>
+  <object id="58" class="Ground" gid="1" x="2368" y="2400" width="64" height="64"/>
+  <object id="59" class="Ground" gid="1" x="1024" y="2336" width="64" height="64"/>
+  <object id="60" class="Ground" gid="1" x="1088" y="2336" width="64" height="64"/>
+  <object id="61" class="Ground" gid="1" x="1152" y="2336" width="64" height="64"/>
+  <object id="62" class="Ground" gid="1" x="1216" y="2336" width="64" height="64"/>
+  <object id="63" class="Ground" gid="1" x="1280" y="2336" width="64" height="64"/>
+  <object id="64" class="Ground" gid="1" x="1344" y="2336" width="64" height="64"/>
+  <object id="65" class="Ground" gid="1" x="1408" y="2336" width="64" height="64"/>
+  <object id="66" class="Ground" gid="1" x="1472" y="2336" width="64" height="64"/>
+  <object id="67" class="Ground" gid="1" x="1536" y="2336" width="64" height="64"/>
+  <object id="68" class="Ground" gid="1" x="1600" y="2336" width="64" height="64"/>
+  <object id="69" class="Ground" gid="1" x="1664" y="2336" width="64" height="64"/>
+  <object id="70" class="Ground" gid="1" x="1728" y="2336" width="64" height="64"/>
+  <object id="71" class="Ground" gid="1" x="1792" y="2336" width="64" height="64"/>
+  <object id="72" class="Ground" gid="1" x="1856" y="2336" width="64" height="64"/>
+  <object id="73" class="Ground" gid="1" x="1920" y="2336" width="64" height="64"/>
+  <object id="74" class="Ground" gid="1" x="1984" y="2336" width="64" height="64"/>
+  <object id="75" class="Ground" gid="1" x="2048" y="2336" width="64" height="64"/>
+  <object id="76" class="Ground" gid="1" x="2112" y="2336" width="64" height="64"/>
+  <object id="77" class="Ground" gid="1" x="2176" y="2336" width="64" height="64"/>
+  <object id="78" class="Ground" gid="1" x="2240" y="2336" width="64" height="64"/>
+  <object id="79" class="Ground" gid="1" x="2304" y="2336" width="64" height="64"/>
+  <object id="80" class="Ground" gid="1" x="2368" y="2336" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="4" name="EndPoint" class="EndPoint">
+  <object id="81" class="EndPoint" gid="2" x="2304" y="2272" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="5" name="BlockPlaceHolder" class="PlaceHolder">
+  <object id="82" class="PlaceHolder" gid="3" x="1056" y="2272" width="64" height="64"/>
  </objectgroup>
 </map>

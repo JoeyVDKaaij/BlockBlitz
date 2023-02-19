@@ -16,6 +16,7 @@ public class Ground : AnimationSpriteAddOn
     private int obstacle = 0;
     public static int abilityToSpawnCooldown = 2;
     public static bool canSpawnObstacle = true;
+    private double xSpeed = 1;
 
     public Ground(string fileName, int colums, int rows, TiledObject groundObject = null) : base(fileName, colums, rows, -1, false, true)
     {
@@ -27,8 +28,8 @@ public class Ground : AnimationSpriteAddOn
 
     void Update()
     {
-        /*
-        x -= 1;
+        x -= (float)xSpeed;
+        xSpeed += DesignerClass.groundXSpeedUp;
         /*
         if (x + width < 0)
         {

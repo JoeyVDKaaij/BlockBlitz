@@ -9,6 +9,7 @@ public class Block : Sprite
 {
 
     public event Action BlockDestroyEvent;
+    private double xSpeed = 1;
 
     public Block(float pX, float pY) : base("colors.png", false, true)
     {
@@ -20,6 +21,8 @@ public class Block : Sprite
 
     void Update()
     {
+        x -= (float)xSpeed;
+        xSpeed += DesignerClass.groundXSpeedUp;
         /*
         x--;
 
