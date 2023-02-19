@@ -5,17 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TiledMapParser;
 
 public class Player : AnimationSpriteAddOn
 {
-    private float ySpeed = 1;
+    private float ySpeed;
 
-    public Player() : base(ArtistClass.playerFileName, ArtistClass.playerColumn, ArtistClass.playerRow, -1, false, true)
+    public Player(TiledObject tiledObjectPlayer = null) : base("barry.png", 7, 1, -1, false, true)
     {
+        if (tiledObjectPlayer != null)
+        {
+            ySpeed = tiledObjectPlayer.GetFloatProperty("ySpeed", 1f);
+        }
         width = DesignerClass.playerWidth;
         height = DesignerClass.playerHeight;
-        x = DesignerClass.playerSpawnX;
-        y = DesignerClass.playerSpawnY;
+        //x = DesignerClass.playerSpawnX;
+        //y = DesignerClass.playerSpawnY;
 
         SetCycle(0, 3);
     }
@@ -35,6 +40,7 @@ public class Player : AnimationSpriteAddOn
         }
         else
         {
+            y -= 1;
             ySpeed = (float)(ySpeed + DesignerClass.playerGravity);
         }
     }
