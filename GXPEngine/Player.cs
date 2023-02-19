@@ -29,13 +29,8 @@ public class Player : AnimationSpriteAddOn
     {
         Animate((float)0.2);
         Collision c = MoveUntilCollision(0, (float)ySpeed);
-        //GameObject[] c = GetCollisions();
         if (c != null)
         {
-            if (c is Ground)
-            {
-                x += 1;
-            }
             ySpeed = 1;
             if (ControlClass.jump)
             {

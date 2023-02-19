@@ -31,7 +31,6 @@ public class EndPoint : AnimationSpriteAddOn
         if (c != null && c.other is Player)
         {
             EndLevelEvent.Invoke();
-            Console.WriteLine("YAY");
         }
         else if (c != null && c.other is Ground || c != null && c.other is PlaceHolder)
         {
