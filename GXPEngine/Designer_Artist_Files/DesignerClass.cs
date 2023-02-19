@@ -26,8 +26,13 @@ public class DesignerClass
     // How many grounds from the bottom of the screen are there at default
     public const int groundCountDefault = 3;
 
-    // How much faster the ground goes per pixel each frame
-    public const double groundXSpeedUp = 0.001;
+    // How much faster the game goes per pixel each frame
+    public const double XSpeedUp = 0.001;
+
+    // Which level the game starts with
+    // Note that reaching the end doesn't send you to the next level
+    public static string startLevel =
+    "testmap.tmx";
 
     // Add the songs for each level in this array (if two songs are the same name the same file twice)
     // Doesn't work yet

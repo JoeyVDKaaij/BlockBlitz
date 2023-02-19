@@ -22,7 +22,7 @@ public class Block : Sprite
     void Update()
     {
         x -= (float)xSpeed;
-        xSpeed += DesignerClass.groundXSpeedUp;
+        xSpeed += DesignerClass.XSpeedUp;
         /*
         x--;
 

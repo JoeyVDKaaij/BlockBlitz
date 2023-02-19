@@ -29,7 +29,7 @@ public class Ground : AnimationSpriteAddOn
     void Update()
     {
         x -= (float)xSpeed;
-        xSpeed += DesignerClass.groundXSpeedUp;
+        xSpeed += DesignerClass.XSpeedUp;
         /*
         if (x + width < 0)
         {

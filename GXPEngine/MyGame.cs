@@ -16,11 +16,7 @@ public class MyGame : Game {
 
     ControlClass controlClass;
 
-    public string startLevel =
-    "testmap.tmx";
-    //".tmx";
-    //"TestMap.tmx";
-    //"Test.tmx";
+    
     string levelToLoad = null;
     public string currentLevel;
     private SoundChannel backgroundMusicSC;
@@ -30,7 +26,7 @@ public class MyGame : Game {
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
         //playerData = new PlayerData();
-        LoadLevel(startLevel);
+        LoadLevel(DesignerClass.startLevel);
         OnAfterStep += CheckLoadLevel;
         EndPoint.EndLevelEvent += EndPoint_EndPointEndLevelEvent;
 

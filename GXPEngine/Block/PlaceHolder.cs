@@ -24,7 +24,7 @@ public class PlaceHolder : AnimationSpriteAddOn
     void Update()
     {
         x -= (float)xSpeed;
-        xSpeed += DesignerClass.groundXSpeedUp;
+        xSpeed += DesignerClass.XSpeedUp;
         /*
         Collision placeHolder = MoveUntilCollision(-1, 0);
 

@@ -36,6 +36,6 @@ public class EndPoint : AnimationSpriteAddOn
         {
             x += (float)xSpeed;
         }
-        xSpeed -= DesignerClass.groundXSpeedUp;
+        xSpeed -= DesignerClass.XSpeedUp;
     }
 }
