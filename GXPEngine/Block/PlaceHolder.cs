@@ -28,7 +28,7 @@ public class PlaceHolder : AnimationSpriteAddOn
         }
         //x = pX;
         //y = DesignerClass.wHeight - height * DesignerClass.groundCountDefault + pY * height; 
-        MyGame.placeHolderWithObstacles[obstacle]++;
+        //MyGame.placeHolderWithObstacles[obstacle]++;
         //Console.WriteLine("Obstacle: " + MyGame.placeHolderWithObstacles[obstacle]);
     }
 
