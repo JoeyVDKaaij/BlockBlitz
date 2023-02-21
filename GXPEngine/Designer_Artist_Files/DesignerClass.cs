@@ -16,8 +16,8 @@ public class DesignerClass
     public const int playerSpawnY = 0;
     public const int playerWidth = 50;
     public const int playerHeight = 50;
-    public const int playerJumpHeight = 5;
-    public const double playerGravity = 0.2;
+    public const int playerJumpHeight = 11;
+    public const double playerGravity = 0.5;
 
     // Ground Variables
     public const int groundWidth = 50;
