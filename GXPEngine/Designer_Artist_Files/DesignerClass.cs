@@ -38,7 +38,11 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
+<<<<<<< HEAD
+    public const double xStartingSpeed = 2;
+=======
     public const double xStartingSpeed = 5;
+>>>>>>> beta
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.001;
