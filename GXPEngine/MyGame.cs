@@ -180,12 +180,12 @@ public class MyGame : Game {
             levelToLoad = null;
         }
     }
-    public void LoadLevel(string filename, int currentLevelSoundTrack = 0)
+    public void LoadLevel(string filename, int currentLevelSoundTrack = 1)
     {
         if (backgroundMusicSC != null)
             backgroundMusicSC.Stop();
-        //Sound backgroundMusic = new Sound(DesignerClass.levelSoundTrack[currentLevelSoundTrack]);
-        //backgroundMusicSC = backgroundMusic.Play();
+        Sound backgroundMusic = new Sound(DesignerClass.levelSoundTrack[currentLevelSoundTrack]);
+        backgroundMusicSC = backgroundMusic.Play(false, 0, DesignerClass.backgroundMusicVolume, 0);
         levelToLoad = filename;
         currentLevel = filename;
     }

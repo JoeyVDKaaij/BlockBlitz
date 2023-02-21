@@ -53,10 +53,6 @@ public class DesignerClass
     public const int coinCounterX = 50;
     public const int coinCounterY = 50;
 
-    // Add the songs for each level in this array (if two songs are the same name the same file twice)
-    // Doesn't work yet
-    public static string[] levelSoundTrack = { "", "", "" };
-
     public static int[,,,] blocks =
         {
             {
@@ -150,5 +146,19 @@ public class DesignerClass
                 }
             },
         };
+
+
+
+    // Add the songs for the title screen, level and possibly the end screen in that order from left to right.
+    // If not changed you should hear the Goat simulator dance music.
+    public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3" };
+
+    public const float backgroundMusicVolume = 1;
+
+    public const float soundEffectVolume = 1;
+
+    public const string jumpSoundEffect = "ping.wav";
+
+    public const string slideSoundEffect = "ping.wav";
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }
