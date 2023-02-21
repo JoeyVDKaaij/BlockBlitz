@@ -1,188 +1,750 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="1000" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="7" nextobjectid="315">
- <tileset firstgid="1" name="Tiles3" tilewidth="64" tileheight="64" margin="64" tilecount="128" columns="8">
-  <image source="Tiles3.png" width="600" height="1120"/>
- </tileset>
- <tileset firstgid="129" name="square" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="1000" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="10" nextobjectid="545">
+ <tileset firstgid="1" name="square" tilewidth="64" tileheight="64" tilecount="1" columns="1">
   <image source="square.png" width="64" height="64"/>
  </tileset>
+ <tileset firstgid="2" name="spike try" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="spike try.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="3" name="checkers" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="checkers.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="4" name="Block 1" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="Block 1.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="5" name="block 2" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 2.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="6" name="block 3" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 3.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="7" name="block 4" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 4.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="8" name="block 5" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 5.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="9" name="block 6" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 6.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="10" name="block 7" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 7.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="11" name="block 8" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 8.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="12" name="block 9" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 9.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="13" name="block 10" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 10.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="14" name="block 11" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="block 11.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="15" name="spike 2" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="spike 2.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="16" name="spikes 3" tilewidth="192" tileheight="60" tilecount="1" columns="1">
+  <image source="spikes 3.png" width="192" height="64"/>
+ </tileset>
+ <tileset firstgid="17" name="spikes 4" tilewidth="128" tileheight="60" tilecount="1" columns="1">
+  <image source="spikes 4.png" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="18" name="spikes 5" tilewidth="256" tileheight="60" tilecount="1" columns="1">
+  <image source="spikes 5.png" width="256" height="64"/>
+ </tileset>
  <objectgroup id="5" name="Ground">
-  <object id="6" class="Ground" gid="129" x="0" y="1280" width="64" height="64"/>
-  <object id="7" class="Ground" gid="129" x="64" y="1280" width="64" height="64"/>
-  <object id="8" class="Ground" gid="129" x="128" y="1280" width="64" height="64"/>
-  <object id="9" class="Ground" gid="129" x="192" y="1280" width="64" height="64"/>
-  <object id="10" class="Ground" gid="129" x="256" y="1280" width="64" height="64"/>
-  <object id="11" class="Ground" gid="129" x="320" y="1280" width="64" height="64"/>
-  <object id="12" class="Ground" gid="129" x="384" y="1280" width="64" height="64"/>
-  <object id="13" class="Ground" gid="129" x="448" y="1280" width="64" height="64"/>
-  <object id="14" class="Ground" gid="129" x="512" y="1280" width="64" height="64"/>
-  <object id="15" class="Ground" gid="129" x="576" y="1280" width="64" height="64"/>
-  <object id="16" class="Ground" gid="129" x="640" y="1280" width="64" height="64"/>
-  <object id="17" class="Ground" gid="129" x="704" y="1280" width="64" height="64"/>
-  <object id="47" class="Ground" gid="129" x="832" y="1216" width="64" height="64"/>
-  <object id="48" class="Ground" gid="129" x="896" y="1216" width="64" height="64"/>
-  <object id="49" class="Ground" gid="129" x="960" y="1216" width="64" height="64"/>
-  <object id="50" class="Ground" gid="129" x="1088" y="1280" width="64" height="64"/>
-  <object id="51" class="Ground" gid="129" x="1152" y="1280" width="64" height="64"/>
-  <object id="52" class="Ground" gid="129" x="1216" y="1280" width="64" height="64"/>
-  <object id="53" class="Ground" gid="129" x="768" y="1280" width="64" height="64"/>
-  <object id="54" class="Ground" gid="129" x="832" y="1280" width="64" height="64"/>
-  <object id="55" class="Ground" gid="129" x="896" y="1280" width="64" height="64"/>
-  <object id="56" class="Ground" gid="129" x="960" y="1280" width="64" height="64"/>
-  <object id="57" class="Ground" gid="129" x="1024" y="1280" width="64" height="64"/>
-  <object id="58" class="Ground" gid="129" x="1024" y="1216" width="64" height="64"/>
-  <object id="61" class="Ground" gid="129" x="1216" y="1088" width="64" height="64"/>
-  <object id="62" class="Ground" gid="129" x="1280" y="1088" width="64" height="64"/>
-  <object id="63" class="Ground" gid="129" x="1344" y="1088" width="64" height="64"/>
-  <object id="64" class="Ground" gid="129" x="1408" y="1088" width="64" height="64"/>
-  <object id="65" class="Ground" gid="129" x="1280" y="1280" width="64" height="64"/>
-  <object id="66" class="Ground" gid="129" x="1408" y="1280" width="64" height="64"/>
-  <object id="67" class="Ground" gid="129" x="1344" y="1280" width="64" height="64"/>
-  <object id="68" class="Ground" gid="129" x="1472" y="1280" width="64" height="64"/>
-  <object id="69" class="Ground" gid="129" x="1536" y="1280" width="64" height="64"/>
-  <object id="70" class="Ground" gid="129" x="1600" y="1280" width="64" height="64"/>
-  <object id="71" class="Ground" gid="129" x="1472" y="1088" width="64" height="64"/>
-  <object id="72" class="Ground" gid="129" x="1152" y="1088" width="64" height="64"/>
-  <object id="79" class="Ground" gid="129" x="2176" y="1280" width="64" height="64"/>
-  <object id="80" class="Ground" gid="129" x="2240" y="1280" width="64" height="64"/>
-  <object id="81" class="Ground" gid="129" x="1856" y="1280" width="64" height="64"/>
-  <object id="88" class="Ground" gid="129" x="1664" y="1280" width="64" height="64"/>
-  <object id="89" class="Ground" gid="129" x="1728" y="1280" width="64" height="64"/>
-  <object id="90" class="Ground" gid="129" x="1792" y="1280" width="64" height="64"/>
-  <object id="91" class="Ground" gid="129" x="1920" y="1280" width="64" height="64"/>
-  <object id="180" class="Ground" gid="129" x="2112" y="1280" width="64" height="64"/>
-  <object id="181" class="Ground" gid="129" x="2304" y="1280" width="64" height="64"/>
-  <object id="182" class="Ground" gid="129" x="2368" y="1280" width="64" height="64"/>
-  <object id="183" class="Ground" gid="129" x="2432" y="1280" width="64" height="64"/>
-  <object id="184" class="Ground" gid="129" x="2496" y="1280" width="64" height="64"/>
-  <object id="185" class="Ground" gid="129" x="2880" y="1280" width="64" height="64"/>
-  <object id="186" class="Ground" gid="129" x="2944" y="1280" width="64" height="64"/>
-  <object id="187" class="Ground" gid="129" x="3008" y="1280" width="64" height="64"/>
-  <object id="188" class="Ground" gid="129" x="3136" y="1280" width="64" height="64"/>
-  <object id="189" class="Ground" gid="129" x="3072" y="1280" width="64" height="64"/>
-  <object id="190" class="Ground" gid="129" x="2624" y="1152" width="64" height="64"/>
-  <object id="191" class="Ground" gid="129" x="2688" y="1152" width="64" height="64"/>
-  <object id="192" class="Ground" gid="129" x="2752" y="1152" width="64" height="64"/>
-  <object id="193" class="Ground" gid="129" x="2880" y="1152" width="64" height="64"/>
-  <object id="194" class="Ground" gid="129" x="2880" y="1216" width="64" height="64"/>
-  <object id="195" class="Ground" gid="129" x="2944" y="1216" width="64" height="64"/>
-  <object id="196" class="Ground" gid="129" x="2944" y="1152" width="64" height="64"/>
-  <object id="197" class="Ground" gid="129" x="3008" y="1152" width="64" height="64"/>
-  <object id="198" class="Ground" gid="129" x="3008" y="1216" width="64" height="64"/>
-  <object id="199" class="Ground" gid="129" x="3072" y="1152" width="64" height="64"/>
-  <object id="200" class="Ground" gid="129" x="3072" y="1216" width="64" height="64"/>
-  <object id="201" class="Ground" gid="129" x="3136" y="1152" width="64" height="64"/>
-  <object id="202" class="Ground" gid="129" x="3136" y="1216" width="64" height="64"/>
-  <object id="203" class="Ground" gid="129" x="2880" y="1088" width="64" height="64"/>
-  <object id="204" class="Ground" gid="129" x="2944" y="1088" width="64" height="64"/>
-  <object id="205" class="Ground" gid="129" x="3008" y="1088" width="64" height="64"/>
-  <object id="206" class="Ground" gid="129" x="3072" y="1088" width="64" height="64"/>
-  <object id="207" class="Ground" gid="129" x="3136" y="1088" width="64" height="64"/>
-  <object id="213" class="Ground" gid="129" x="3648" y="832" width="64" height="64"/>
-  <object id="214" class="Ground" gid="129" x="3584" y="832" width="64" height="64"/>
-  <object id="215" class="Ground" gid="129" x="3712" y="832" width="64" height="64"/>
-  <object id="216" class="Ground" gid="129" x="3776" y="832" width="64" height="64"/>
-  <object id="217" class="Ground" gid="129" x="3840" y="832" width="64" height="64"/>
-  <object id="218" class="Ground" gid="129" x="3584" y="1152" width="64" height="64"/>
-  <object id="219" class="Ground" gid="129" x="3584" y="1216" width="64" height="64"/>
-  <object id="220" class="Ground" gid="129" x="3584" y="1280" width="64" height="64"/>
-  <object id="221" class="Ground" gid="129" x="3648" y="1280" width="64" height="64"/>
-  <object id="222" class="Ground" gid="129" x="3648" y="1216" width="64" height="64"/>
-  <object id="223" class="Ground" gid="129" x="3648" y="1152" width="64" height="64"/>
-  <object id="224" class="Ground" gid="129" x="3712" y="1152" width="64" height="64"/>
-  <object id="225" class="Ground" gid="129" x="3712" y="1216" width="64" height="64"/>
-  <object id="226" class="Ground" gid="129" x="3712" y="1280" width="64" height="64"/>
-  <object id="227" class="Ground" gid="129" x="3776" y="1152" width="64" height="64"/>
-  <object id="228" class="Ground" gid="129" x="3776" y="1216" width="64" height="64"/>
-  <object id="229" class="Ground" gid="129" x="3776" y="1280" width="64" height="64"/>
-  <object id="230" class="Ground" gid="129" x="3840" y="1152" width="64" height="64"/>
-  <object id="231" class="Ground" gid="129" x="3840" y="1216" width="64" height="64"/>
-  <object id="232" class="Ground" gid="129" x="3840" y="1280" width="64" height="64"/>
-  <object id="233" class="Ground" gid="129" x="3904" y="1152" width="64" height="64"/>
-  <object id="234" class="Ground" gid="129" x="3904" y="1216" width="64" height="64"/>
-  <object id="235" class="Ground" gid="129" x="3904" y="1280" width="64" height="64"/>
-  <object id="236" class="Ground" gid="129" x="3968" y="1152" width="64" height="64"/>
-  <object id="237" class="Ground" gid="129" x="3968" y="1216" width="64" height="64"/>
-  <object id="238" class="Ground" gid="129" x="3968" y="1280" width="64" height="64"/>
-  <object id="239" class="Ground" gid="129" x="3904" y="832" width="64" height="64"/>
-  <object id="240" class="Ground" gid="129" x="3968" y="832" width="64" height="64"/>
-  <object id="241" class="Ground" gid="129" x="3264" y="1024" width="64" height="64"/>
-  <object id="242" class="Ground" gid="129" x="3328" y="1024" width="64" height="64"/>
-  <object id="243" class="Ground" gid="129" x="3392" y="1024" width="64" height="64"/>
-  <object id="244" class="Ground" gid="129" x="3456" y="1024" width="64" height="64"/>
-  <object id="245" class="Ground" gid="129" x="4032" y="1152" width="64" height="64"/>
-  <object id="246" class="Ground" gid="129" x="4096" y="1216" width="64" height="64"/>
-  <object id="247" class="Ground" gid="129" x="4032" y="1216" width="64" height="64"/>
-  <object id="248" class="Ground" gid="129" x="4032" y="1280" width="64" height="64"/>
-  <object id="249" class="Ground" gid="129" x="4096" y="1280" width="64" height="64"/>
-  <object id="250" class="Ground" gid="129" x="4160" y="1280" width="64" height="64"/>
-  <object id="251" class="Ground" gid="129" x="4160" y="1216" width="64" height="64"/>
-  <object id="252" class="Ground" gid="129" x="4224" y="1216" width="64" height="64"/>
-  <object id="253" class="Ground" gid="129" x="4224" y="1280" width="64" height="64"/>
-  <object id="254" class="Ground" gid="129" x="4288" y="1280" width="64" height="64"/>
-  <object id="255" class="Ground" gid="129" x="4288" y="1216" width="64" height="64"/>
-  <object id="256" class="Ground" gid="129" x="4352" y="1216" width="64" height="64"/>
-  <object id="257" class="Ground" gid="129" x="4352" y="1280" width="64" height="64"/>
-  <object id="258" class="Ground" gid="129" x="4416" y="1216" width="64" height="64"/>
-  <object id="259" class="Ground" gid="129" x="4480" y="1280" width="64" height="64"/>
-  <object id="260" class="Ground" gid="129" x="4416" y="1280" width="64" height="64"/>
-  <object id="261" class="Ground" gid="129" x="4480" y="1216" width="64" height="64"/>
-  <object id="262" class="Ground" gid="129" x="4096" y="1152" width="64" height="64"/>
-  <object id="263" class="Ground" gid="129" x="4160" y="1152" width="64" height="64"/>
-  <object id="264" class="Ground" gid="129" x="4224" y="1152" width="64" height="64"/>
-  <object id="265" class="Ground" gid="129" x="4288" y="1152" width="64" height="64"/>
-  <object id="266" class="Ground" gid="129" x="4352" y="1152" width="64" height="64"/>
-  <object id="267" class="Ground" gid="129" x="4416" y="1152" width="64" height="64"/>
-  <object id="268" class="Ground" gid="129" x="4480" y="1152" width="64" height="64"/>
-  <object id="269" class="Ground" gid="129" x="4544" y="1216" width="64" height="64"/>
-  <object id="270" class="Ground" gid="129" x="4544" y="1280" width="64" height="64"/>
-  <object id="271" class="Ground" gid="129" x="4608" y="1280" width="64" height="64"/>
-  <object id="272" class="Ground" gid="129" x="4608" y="1216" width="64" height="64"/>
-  <object id="273" class="Ground" gid="129" x="4672" y="1216" width="64" height="64"/>
-  <object id="274" class="Ground" gid="129" x="4672" y="1280" width="64" height="64"/>
-  <object id="275" class="Ground" gid="129" x="4736" y="1216" width="64" height="64"/>
-  <object id="276" class="Ground" gid="129" x="4736" y="1280" width="64" height="64"/>
-  <object id="277" class="Ground" gid="129" x="4800" y="1216" width="64" height="64"/>
-  <object id="278" class="Ground" gid="129" x="4800" y="1280" width="64" height="64"/>
-  <object id="279" class="Ground" gid="129" x="4864" y="1216" width="64" height="64"/>
-  <object id="280" class="Ground" gid="129" x="4864" y="1280" width="64" height="64"/>
-  <object id="281" class="Ground" gid="129" x="4928" y="1216" width="64" height="64"/>
-  <object id="282" class="Ground" gid="129" x="4928" y="1280" width="64" height="64"/>
-  <object id="283" class="Ground" gid="129" x="4992" y="1216" width="64" height="64"/>
-  <object id="284" class="Ground" gid="129" x="4992" y="1280" width="64" height="64"/>
-  <object id="285" class="Ground" gid="129" x="4608" y="1024" width="64" height="64"/>
-  <object id="286" class="Ground" gid="129" x="4672" y="1024" width="64" height="64"/>
-  <object id="287" class="Ground" gid="129" x="4736" y="1024" width="64" height="64"/>
-  <object id="288" class="Ground" gid="129" x="4800" y="1024" width="64" height="64"/>
-  <object id="289" class="Ground" gid="129" x="4864" y="1024" width="64" height="64"/>
-  <object id="290" class="Ground" gid="129" x="4928" y="1024" width="64" height="64"/>
-  <object id="291" class="Ground" gid="129" x="5056" y="1216" width="64" height="64"/>
-  <object id="292" class="Ground" gid="129" x="5056" y="1280" width="64" height="64"/>
-  <object id="293" class="Ground" gid="129" x="5120" y="1216" width="64" height="64"/>
-  <object id="294" class="Ground" gid="129" x="5184" y="1216" width="64" height="64"/>
-  <object id="295" class="Ground" gid="129" x="5120" y="1280" width="64" height="64"/>
-  <object id="296" class="Ground" gid="129" x="5184" y="1280" width="64" height="64"/>
-  <object id="297" class="Ground" gid="129" x="5248" y="1216" width="64" height="64"/>
-  <object id="298" class="Ground" gid="129" x="5248" y="1280" width="64" height="64"/>
-  <object id="299" class="Ground" gid="129" x="5312" y="1216" width="64" height="64"/>
-  <object id="300" class="Ground" gid="129" x="5312" y="1280" width="64" height="64"/>
-  <object id="301" class="Ground" gid="129" x="5440" y="1216" width="64" height="64"/>
-  <object id="302" class="Ground" gid="129" x="5376" y="1216" width="64" height="64"/>
-  <object id="303" class="Ground" gid="129" x="5376" y="1280" width="64" height="64"/>
-  <object id="304" class="Ground" gid="129" x="5440" y="1280" width="64" height="64"/>
-  <object id="305" class="Ground" gid="129" x="5120" y="896" width="64" height="64"/>
-  <object id="306" class="Ground" gid="129" x="5184" y="896" width="64" height="64"/>
-  <object id="307" class="Ground" gid="129" x="5248" y="896" width="64" height="64"/>
-  <object id="308" class="Ground" gid="129" x="5312" y="896" width="64" height="64"/>
-  <object id="309" class="Ground" gid="129" x="5376" y="896" width="64" height="64"/>
-  <object id="310" class="Ground" gid="129" x="5120" y="960" width="64" height="64"/>
-  <object id="311" class="Ground" gid="129" x="5184" y="960" width="64" height="64"/>
-  <object id="312" class="Ground" gid="129" x="5248" y="960" width="64" height="64"/>
-  <object id="313" class="Ground" gid="129" x="5312" y="960" width="64" height="64"/>
-  <object id="314" class="Ground" gid="129" x="5376" y="960" width="64" height="64"/>
+  <object id="6" class="Ground" gid="5" x="0" y="1280" width="64" height="64"/>
+  <object id="7" class="Ground" gid="5" x="64" y="1280" width="64" height="64"/>
+  <object id="8" class="Ground" gid="5" x="128" y="1280" width="64" height="64"/>
+  <object id="9" class="Ground" gid="5" x="192" y="1280" width="64" height="64"/>
+  <object id="10" class="Ground" gid="5" x="256" y="1280" width="64" height="64"/>
+  <object id="11" class="Ground" gid="5" x="320" y="1280" width="64" height="64"/>
+  <object id="12" class="Ground" gid="5" x="384" y="1280" width="64" height="64"/>
+  <object id="13" class="Ground" gid="5" x="448" y="1280" width="64" height="64"/>
+  <object id="14" class="Ground" gid="5" x="512" y="1280" width="64" height="64"/>
+  <object id="15" class="Ground" gid="5" x="576" y="1280" width="64" height="64"/>
+  <object id="16" class="Ground" gid="5" x="640" y="1280" width="64" height="64"/>
+  <object id="17" class="Ground" gid="5" x="704" y="1280" width="64" height="64"/>
+  <object id="47" class="Ground" gid="7" x="832" y="1216" width="64" height="64"/>
+  <object id="48" class="Ground" gid="5" x="896" y="1216" width="64" height="64"/>
+  <object id="49" class="Ground" gid="5" x="960" y="1216" width="64" height="64"/>
+  <object id="50" class="Ground" gid="5" x="1088" y="1280" width="64" height="64"/>
+  <object id="51" class="Ground" gid="5" x="1152" y="1280" width="64" height="64"/>
+  <object id="52" class="Ground" gid="5" x="1216" y="1280" width="64" height="64"/>
+  <object id="53" class="Ground" gid="5" x="768" y="1280" width="64" height="64"/>
+  <object id="54" class="Ground" gid="13" x="832" y="1280" width="64" height="64"/>
+  <object id="55" class="Ground" gid="12" x="896" y="1280" width="64" height="64"/>
+  <object id="56" class="Ground" gid="12" x="960" y="1280" width="64" height="64"/>
+  <object id="57" class="Ground" gid="14" x="1024" y="1280" width="64" height="64"/>
+  <object id="58" class="Ground" gid="6" x="1024" y="1216" width="64" height="64"/>
+  <object id="65" class="Ground" gid="5" x="1280" y="1280" width="64" height="64"/>
+  <object id="66" class="Ground" gid="5" x="1408" y="1280" width="64" height="64"/>
+  <object id="67" class="Ground" gid="5" x="1344" y="1280" width="64" height="64"/>
+  <object id="79" class="Ground" gid="5" x="1856" y="1280" width="64" height="64"/>
+  <object id="80" class="Ground" gid="5" x="1920" y="1280" width="64" height="64"/>
+  <object id="81" class="Ground" gid="5" x="1536" y="1280" width="64" height="64"/>
+  <object id="90" class="Ground" gid="5" x="1472" y="1280" width="64" height="64"/>
+  <object id="91" class="Ground" gid="6" x="1600" y="1280" width="64" height="64"/>
+  <object id="180" class="Ground" gid="7" x="1792" y="1280" width="64" height="64"/>
+  <object id="181" class="Ground" gid="5" x="1984" y="1280" width="64" height="64"/>
+  <object id="182" class="Ground" gid="5" x="2048" y="1280" width="64" height="64"/>
+  <object id="183" class="Ground" gid="5" x="2112" y="1280" width="64" height="64"/>
+  <object id="184" class="Ground" gid="6" x="2176" y="1280" width="64" height="64"/>
+  <object id="185" class="Ground" gid="13" x="2560" y="1280" width="64" height="64"/>
+  <object id="186" class="Ground" gid="12" x="2624" y="1280" width="64" height="64"/>
+  <object id="187" class="Ground" gid="12" x="2688" y="1280" width="64" height="64"/>
+  <object id="188" class="Ground" gid="14" x="2816" y="1280" width="64" height="64"/>
+  <object id="189" class="Ground" gid="12" x="2752" y="1280" width="64" height="64"/>
+  <object id="190" class="Ground" gid="7" x="2304" y="1152" width="64" height="64"/>
+  <object id="191" class="Ground" gid="5" x="2368" y="1152" width="64" height="64"/>
+  <object id="192" class="Ground" gid="6" x="2432" y="1152" width="64" height="64"/>
+  <object id="193" class="Ground" gid="13" x="2560" y="1152" width="64" height="64"/>
+  <object id="194" class="Ground" gid="13" x="2560" y="1216" width="64" height="64"/>
+  <object id="195" class="Ground" gid="12" x="2624" y="1216" width="64" height="64"/>
+  <object id="196" class="Ground" gid="12" x="2624" y="1152" width="64" height="64"/>
+  <object id="197" class="Ground" gid="12" x="2688" y="1152" width="64" height="64"/>
+  <object id="198" class="Ground" gid="12" x="2688" y="1216" width="64" height="64"/>
+  <object id="199" class="Ground" gid="12" x="2752" y="1152" width="64" height="64"/>
+  <object id="200" class="Ground" gid="12" x="2752" y="1216" width="64" height="64"/>
+  <object id="201" class="Ground" gid="14" x="2816" y="1152" width="64" height="64"/>
+  <object id="202" class="Ground" gid="14" x="2816" y="1216" width="64" height="64"/>
+  <object id="203" class="Ground" gid="7" x="2560" y="1088" width="64" height="64"/>
+  <object id="204" class="Ground" gid="5" x="2624" y="1088" width="64" height="64"/>
+  <object id="205" class="Ground" gid="5" x="2688" y="1088" width="64" height="64"/>
+  <object id="206" class="Ground" gid="5" x="2752" y="1088" width="64" height="64"/>
+  <object id="207" class="Ground" gid="6" x="2816" y="1088" width="64" height="64"/>
+  <object id="213" class="Ground" gid="5" x="3328" y="768" width="64" height="64"/>
+  <object id="483" class="Ground" gid="5" x="3840" y="640" width="64" height="64"/>
+  <object id="214" class="Ground" gid="7" x="3264" y="768" width="64" height="64"/>
+  <object id="482" class="Ground" gid="7" x="3776" y="640" width="64" height="64"/>
+  <object id="215" class="Ground" gid="5" x="3392" y="768" width="64" height="64"/>
+  <object id="485" class="Ground" gid="5" x="3904" y="640" width="64" height="64"/>
+  <object id="216" class="Ground" gid="5" x="3456" y="768" width="64" height="64"/>
+  <object id="486" class="Ground" gid="5" x="3968" y="640" width="64" height="64"/>
+  <object id="217" class="Ground" gid="5" x="3520" y="768" width="64" height="64"/>
+  <object id="487" class="Ground" gid="5" x="4032" y="640" width="64" height="64"/>
+  <object id="218" class="Ground" gid="7" x="3264" y="1152" width="64" height="64"/>
+  <object id="384" class="Ground" gid="7" x="4288" y="768" width="64" height="64"/>
+  <object id="385" class="Ground" gid="7" x="4672" y="1152" width="64" height="64"/>
+  <object id="219" class="Ground" gid="13" x="3264" y="1216" width="64" height="64"/>
+  <object id="220" class="Ground" gid="13" x="3264" y="1280" width="64" height="64"/>
+  <object id="221" class="Ground" gid="12" x="3328" y="1280" width="64" height="64"/>
+  <object id="222" class="Ground" gid="12" x="3328" y="1216" width="64" height="64"/>
+  <object id="223" class="Ground" gid="5" x="3328" y="1152" width="64" height="64"/>
+  <object id="224" class="Ground" gid="5" x="3392" y="1152" width="64" height="64"/>
+  <object id="225" class="Ground" gid="12" x="3392" y="1216" width="64" height="64"/>
+  <object id="226" class="Ground" gid="12" x="3392" y="1280" width="64" height="64"/>
+  <object id="227" class="Ground" gid="5" x="3456" y="1152" width="64" height="64"/>
+  <object id="228" class="Ground" gid="12" x="3456" y="1216" width="64" height="64"/>
+  <object id="229" class="Ground" gid="12" x="3456" y="1280" width="64" height="64"/>
+  <object id="230" class="Ground" gid="5" x="3520" y="1152" width="64" height="64"/>
+  <object id="231" class="Ground" gid="12" x="3520" y="1216" width="64" height="64"/>
+  <object id="232" class="Ground" gid="12" x="3520" y="1280" width="64" height="64"/>
+  <object id="233" class="Ground" gid="5" x="3584" y="1152" width="64" height="64"/>
+  <object id="234" class="Ground" gid="12" x="3584" y="1216" width="64" height="64"/>
+  <object id="235" class="Ground" gid="12" x="3584" y="1280" width="64" height="64"/>
+  <object id="236" class="Ground" gid="5" x="3648" y="1152" width="64" height="64"/>
+  <object id="237" class="Ground" gid="12" x="3648" y="1216" width="64" height="64"/>
+  <object id="238" class="Ground" gid="12" x="3648" y="1280" width="64" height="64"/>
+  <object id="239" class="Ground" gid="5" x="3584" y="768" width="64" height="64"/>
+  <object id="240" class="Ground" gid="6" x="3648" y="768" width="64" height="64"/>
+  <object id="488" class="Ground" gid="6" x="4096" y="640" width="64" height="64"/>
+  <object id="245" class="Ground" gid="5" x="3712" y="1152" width="64" height="64"/>
+  <object id="247" class="Ground" gid="12" x="3712" y="1216" width="64" height="64"/>
+  <object id="248" class="Ground" gid="12" x="3712" y="1280" width="64" height="64"/>
+  <object id="258" class="Ground" gid="12" x="3776" y="1216" width="64" height="64"/>
+  <object id="260" class="Ground" gid="12" x="3776" y="1280" width="64" height="64"/>
+  <object id="267" class="Ground" gid="5" x="3776" y="1152" width="64" height="64"/>
+  <object id="269" class="Ground" gid="5" x="3904" y="1152" width="64" height="64"/>
+  <object id="387" class="Ground" gid="5" x="3840" y="1152" width="64" height="64"/>
+  <object id="270" class="Ground" gid="12" x="3904" y="1216" width="64" height="64"/>
+  <object id="388" class="Ground" gid="12" x="3840" y="1216" width="64" height="64"/>
+  <object id="389" class="Ground" gid="12" x="3840" y="1280" width="64" height="64"/>
+  <object id="390" class="Ground" gid="12" x="3904" y="1280" width="64" height="64"/>
+  <object id="391" class="Ground" gid="12" x="3968" y="1280" width="64" height="64"/>
+  <object id="392" class="Ground" gid="12" x="4032" y="1280" width="64" height="64"/>
+  <object id="393" class="Ground" gid="12" x="4096" y="1280" width="64" height="64"/>
+  <object id="394" class="Ground" gid="12" x="4160" y="1280" width="64" height="64"/>
+  <object id="395" class="Ground" gid="12" x="4224" y="1280" width="64" height="64"/>
+  <object id="271" class="Ground" gid="12" x="3968" y="1216" width="64" height="64"/>
+  <object id="272" class="Ground" gid="5" x="3968" y="1152" width="64" height="64"/>
+  <object id="273" class="Ground" gid="5" x="4032" y="1152" width="64" height="64"/>
+  <object id="274" class="Ground" gid="12" x="4032" y="1216" width="64" height="64"/>
+  <object id="275" class="Ground" gid="5" x="4096" y="1152" width="64" height="64"/>
+  <object id="276" class="Ground" gid="12" x="4096" y="1216" width="64" height="64"/>
+  <object id="277" class="Ground" gid="5" x="4160" y="1152" width="64" height="64"/>
+  <object id="278" class="Ground" gid="12" x="4160" y="1216" width="64" height="64"/>
+  <object id="379" class="Ground" gid="5" x="4352" y="768" width="64" height="64"/>
+  <object id="380" class="Ground" gid="5" x="4416" y="768" width="64" height="64"/>
+  <object id="381" class="Ground" gid="5" x="4480" y="768" width="64" height="64"/>
+  <object id="382" class="Ground" gid="5" x="4480" y="768" width="64" height="64"/>
+  <object id="403" class="Ground" gid="5" x="4544" y="768" width="64" height="64"/>
+  <object id="280" class="Ground" gid="14" x="4224" y="1216" width="64" height="64"/>
+  <object id="282" class="Ground" gid="12" x="4288" y="1280" width="64" height="64"/>
+  <object id="284" class="Ground" gid="12" x="4352" y="1280" width="64" height="64"/>
+  <object id="292" class="Ground" gid="12" x="4416" y="1280" width="64" height="64"/>
+  <object id="296" class="Ground" gid="12" x="4544" y="1280" width="64" height="64"/>
+  <object id="396" class="Ground" gid="12" x="4480" y="1280" width="64" height="64"/>
+  <object id="298" class="Ground" gid="12" x="4608" y="1280" width="64" height="64"/>
+  <object id="397" class="Ground" gid="13" x="4672" y="1216" width="64" height="64"/>
+  <object id="399" class="Ground" gid="12" x="4736" y="1216" width="64" height="64"/>
+  <object id="448" class="Ground" gid="12" x="4800" y="1216" width="64" height="64"/>
+  <object id="449" class="Ground" gid="12" x="4800" y="1280" width="64" height="64"/>
+  <object id="450" class="Ground" gid="12" x="4864" y="1280" width="64" height="64"/>
+  <object id="451" class="Ground" gid="12" x="4864" y="1216" width="64" height="64"/>
+  <object id="452" class="Ground" gid="12" x="4928" y="1216" width="64" height="64"/>
+  <object id="453" class="Ground" gid="12" x="4928" y="1280" width="64" height="64"/>
+  <object id="454" class="Ground" gid="12" x="4992" y="1280" width="64" height="64"/>
+  <object id="455" class="Ground" gid="12" x="4992" y="1216" width="64" height="64"/>
+  <object id="456" class="Ground" gid="12" x="5056" y="1216" width="64" height="64"/>
+  <object id="496" class="Ground" gid="12" x="5120" y="1216" width="64" height="64"/>
+  <object id="497" class="Ground" gid="12" x="5184" y="1216" width="64" height="64"/>
+  <object id="498" class="Ground" gid="12" x="5248" y="1216" width="64" height="64"/>
+  <object id="499" class="Ground" gid="12" x="5312" y="1216" width="64" height="64"/>
+  <object id="500" class="Ground" gid="12" x="5376" y="1216" width="64" height="64"/>
+  <object id="501" class="Ground" gid="12" x="5440" y="1216" width="64" height="64"/>
+  <object id="502" class="Ground" gid="12" x="5504" y="1216" width="64" height="64"/>
+  <object id="503" class="Ground" gid="12" x="5568" y="1216" width="64" height="64"/>
+  <object id="504" class="Ground" gid="12" x="5632" y="1216" width="64" height="64"/>
+  <object id="505" class="Ground" gid="12" x="5696" y="1216" width="64" height="64"/>
+  <object id="506" class="Ground" gid="12" x="5760" y="1216" width="64" height="64"/>
+  <object id="507" class="Ground" gid="12" x="5824" y="1216" width="64" height="64"/>
+  <object id="508" class="Ground" gid="12" x="5888" y="1216" width="64" height="64"/>
+  <object id="523" class="Ground" gid="12" x="5952" y="1216" width="64" height="64"/>
+  <object id="524" class="Ground" gid="12" x="5952" y="1280" width="64" height="64"/>
+  <object id="525" class="Ground" gid="12" x="6016" y="1280" width="64" height="64"/>
+  <object id="526" class="Ground" gid="12" x="6016" y="1216" width="64" height="64"/>
+  <object id="527" class="Ground" gid="12" x="6080" y="1216" width="64" height="64"/>
+  <object id="528" class="Ground" gid="12" x="6080" y="1280" width="64" height="64"/>
+  <object id="529" class="Ground" gid="12" x="6144" y="1280" width="64" height="64"/>
+  <object id="530" class="Ground" gid="12" x="6144" y="1216" width="64" height="64"/>
+  <object id="531" class="Ground" gid="12" x="6208" y="1216" width="64" height="64"/>
+  <object id="532" class="Ground" gid="12" x="6208" y="1280" width="64" height="64"/>
+  <object id="533" class="Ground" gid="12" x="6272" y="1280" width="64" height="64"/>
+  <object id="534" class="Ground" gid="12" x="6272" y="1216" width="64" height="64"/>
+  <object id="535" class="Ground" gid="12" x="6336" y="1216" width="64" height="64"/>
+  <object id="536" class="Ground" gid="12" x="6336" y="1280" width="64" height="64"/>
+  <object id="537" class="Ground" gid="12" x="6400" y="1280" width="64" height="64"/>
+  <object id="538" class="Ground" gid="12" x="6400" y="1216" width="64" height="64"/>
+  <object id="539" class="Ground" gid="12" x="6464" y="1216" width="64" height="64"/>
+  <object id="540" class="Ground" gid="12" x="6464" y="1280" width="64" height="64"/>
+  <object id="541" class="Ground" gid="12" x="6528" y="1280" width="64" height="64"/>
+  <object id="542" class="Ground" gid="12" x="6528" y="1216" width="64" height="64"/>
+  <object id="543" class="Ground" gid="12" x="6592" y="1216" width="64" height="64"/>
+  <object id="544" class="Ground" gid="12" x="6592" y="1280" width="64" height="64"/>
+  <object id="509" class="Ground" gid="12" x="5888" y="1280" width="64" height="64"/>
+  <object id="510" class="Ground" gid="12" x="5824" y="1280" width="64" height="64"/>
+  <object id="511" class="Ground" gid="12" x="5760" y="1280" width="64" height="64"/>
+  <object id="512" class="Ground" gid="12" x="5696" y="1280" width="64" height="64"/>
+  <object id="513" class="Ground" gid="12" x="5632" y="1280" width="64" height="64"/>
+  <object id="514" class="Ground" gid="12" x="5568" y="1280" width="64" height="64"/>
+  <object id="515" class="Ground" gid="12" x="5504" y="1280" width="64" height="64"/>
+  <object id="516" class="Ground" gid="12" x="5440" y="1280" width="64" height="64"/>
+  <object id="517" class="Ground" gid="12" x="5376" y="1280" width="64" height="64"/>
+  <object id="518" class="Ground" gid="12" x="5184" y="1280" width="64" height="64"/>
+  <object id="522" class="Ground" gid="12" x="5120" y="1280" width="64" height="64"/>
+  <object id="519" class="Ground" gid="12" x="5312" y="1280" width="64" height="64"/>
+  <object id="520" class="Ground" gid="12" x="5248" y="1280" width="64" height="64"/>
+  <object id="521" class="Ground" gid="12" x="5248" y="1280" width="64" height="64"/>
+  <object id="457" class="Ground" gid="12" x="5056" y="1280" width="64" height="64"/>
+  <object id="300" class="Ground" gid="12" x="4672" y="1280" width="64" height="64"/>
+  <object id="383" class="Ground" gid="6" x="4608" y="768" width="64" height="64"/>
+  <object id="386" class="Ground" gid="6" x="4224" y="1152" width="64" height="64"/>
+  <object id="302" class="Ground" gid="5" x="4736" y="1152" width="64" height="64"/>
+  <object id="443" class="Ground" gid="5" x="4800" y="1152" width="64" height="64"/>
+  <object id="444" class="Ground" gid="5" x="4864" y="1152" width="64" height="64"/>
+  <object id="445" class="Ground" gid="5" x="4928" y="1152" width="64" height="64"/>
+  <object id="446" class="Ground" gid="5" x="4992" y="1152" width="64" height="64"/>
+  <object id="447" class="Ground" gid="5" x="5056" y="1152" width="64" height="64"/>
+  <object id="303" class="Ground" gid="12" x="4736" y="1280" width="64" height="64"/>
+  <object id="354" class="Ground" gid="14" x="2432" y="1216" width="64" height="64"/>
+  <object id="355" class="Ground" gid="14" x="2432" y="1280" width="64" height="64"/>
+  <object id="356" class="Ground" gid="13" x="2304" y="1216" width="64" height="64"/>
+  <object id="357" class="Ground" gid="13" x="2304" y="1280" width="64" height="64"/>
+  <object id="358" class="Ground" gid="12" x="2368" y="1216" width="64" height="64"/>
+  <object id="359" class="Ground" gid="12" x="2368" y="1280" width="64" height="64"/>
+  <object id="406" class="Ground" gid="12" x="4352" y="832" width="64" height="64"/>
+  <object id="407" class="Ground" gid="12" x="4416" y="832" width="64" height="64"/>
+  <object id="408" class="Ground" gid="12" x="4480" y="832" width="64" height="64"/>
+  <object id="409" class="Ground" gid="12" x="4544" y="832" width="64" height="64"/>
+  <object id="410" class="Ground" gid="12" x="4544" y="896" width="64" height="64"/>
+  <object id="411" class="Ground" gid="12" x="4480" y="896" width="64" height="64"/>
+  <object id="412" class="Ground" gid="12" x="4416" y="896" width="64" height="64"/>
+  <object id="413" class="Ground" gid="12" x="4352" y="896" width="64" height="64"/>
+  <object id="414" class="Ground" gid="11" x="4608" y="960" width="64" height="64"/>
+  <object id="415" class="Ground" gid="10" x="4288" y="960" width="64" height="64"/>
+  <object id="416" class="Ground" gid="9" x="4352" y="960" width="64" height="64"/>
+  <object id="417" class="Ground" gid="9" x="4416" y="960" width="64" height="64"/>
+  <object id="418" class="Ground" gid="9" x="4480" y="960" width="64" height="64"/>
+  <object id="419" class="Ground" gid="9" x="4544" y="960" width="64" height="64"/>
+  <object id="420" class="Ground" gid="14" x="4608" y="832" width="64" height="64"/>
+  <object id="421" class="Ground" gid="14" x="4608" y="896" width="64" height="64"/>
+  <object id="422" class="Ground" gid="13" x="4288" y="832" width="64" height="64"/>
+  <object id="423" class="Ground" gid="13" x="4288" y="896" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup id="7" name="Spike">
+  <object id="404" class="Spike" gid="16" x="4288" y="1216" width="192" height="60"/>
+  <object id="480" class="Spike" gid="16" x="4288" y="704" width="192" height="60"/>
+  <object id="481" class="Spike" gid="16" x="4480" y="704" width="192" height="60"/>
+  <object id="405" class="Spike" gid="16" x="4480" y="1216" width="192" height="60"/>
+  <object id="458" class="Spike" gid="15" x="1088" y="1216" width="51.6393" height="54"/>
+  <object id="460" class="Spike" gid="15" x="2240" y="1280" width="63.8115" height="61.5"/>
+  <object id="461" class="Spike" gid="15" x="2496" y="1280" width="63.8115" height="61.5"/>
+  <object id="459" class="Spike" gid="17" x="1664" y="1280" width="128" height="60"/>
+  <object id="489" gid="18" x="5120" y="1152" width="256" height="60"/>
+  <object id="490" gid="18" x="5376" y="1152" width="256" height="60"/>
+  <object id="491" gid="18" x="5632" y="1152" width="256" height="60"/>
+  <object id="492" gid="18" x="5888" y="1152" width="256" height="60"/>
+  <object id="494" gid="18" x="6144" y="1152" width="256" height="60"/>
+  <object id="495" gid="18" x="6400" y="1152" width="256" height="60"/>
+ </objectgroup>
+ <objectgroup id="8" name="PlaceHolder" opacity="0.14">
+  <object id="326" class="PlaceHolder" gid="3" x="1152" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="327" class="PlaceHolder" gid="3" x="1152" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="328" class="PlaceHolder" gid="3" x="1152" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="329" class="PlaceHolder" gid="3" x="1216" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="330" class="PlaceHolder" gid="3" x="1216" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="331" class="PlaceHolder" gid="3" x="1280" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="332" class="PlaceHolder" gid="3" x="1280" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="333" class="PlaceHolder" gid="3" x="1344" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="334" class="PlaceHolder" gid="3" x="1344" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="335" class="PlaceHolder" gid="3" x="1408" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="336" class="PlaceHolder" gid="3" x="1408" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="337" class="PlaceHolder" gid="3" x="1408" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="338" class="PlaceHolder" gid="3" x="1344" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="339" class="PlaceHolder" gid="3" x="1216" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="340" class="PlaceHolder" gid="3" x="1280" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="0"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="360" class="PlaceHolder" gid="3" x="2944" y="896" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="368" class="PlaceHolder" gid="3" x="3008" y="896" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="369" class="PlaceHolder" gid="3" x="3072" y="896" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="370" class="PlaceHolder" gid="3" x="3136" y="896" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="371" class="PlaceHolder" gid="3" x="2944" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="372" class="PlaceHolder" gid="3" x="3008" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="373" class="PlaceHolder" gid="3" x="3072" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="374" class="PlaceHolder" gid="3" x="3136" y="960" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="375" class="PlaceHolder" gid="3" x="2944" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="376" class="PlaceHolder" gid="3" x="3008" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="377" class="PlaceHolder" gid="3" x="3072" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="378" class="PlaceHolder" gid="3" x="3136" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="1"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="424" class="PlaceHolder" gid="3" x="4288" y="1152" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="467" class="PlaceHolder" gid="3" x="4288" y="640" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="425" class="PlaceHolder" gid="3" x="4352" y="1152" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="466" class="PlaceHolder" gid="3" x="4352" y="640" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="426" class="PlaceHolder" gid="3" x="4416" y="1152" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="465" class="PlaceHolder" gid="3" x="4416" y="640" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="427" class="PlaceHolder" gid="3" x="4480" y="1152" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="464" class="PlaceHolder" gid="3" x="4480" y="640" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="428" class="PlaceHolder" gid="3" x="4544" y="1152" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="463" class="PlaceHolder" gid="3" x="4544" y="640" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="429" class="PlaceHolder" gid="3" x="4608" y="1152" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="6"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="462" class="PlaceHolder" gid="3" x="4608" y="640" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="6"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="430" class="PlaceHolder" gid="3" x="4608" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="473" class="PlaceHolder" gid="3" x="4608" y="576" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="431" class="PlaceHolder" gid="3" x="4544" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="472" class="PlaceHolder" gid="3" x="4544" y="576" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="432" class="PlaceHolder" gid="3" x="4480" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="471" class="PlaceHolder" gid="3" x="4480" y="576" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="433" class="PlaceHolder" gid="3" x="4416" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="470" class="PlaceHolder" gid="3" x="4416" y="576" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="434" class="PlaceHolder" gid="3" x="4352" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="469" class="PlaceHolder" gid="3" x="4352" y="576" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="435" class="PlaceHolder" gid="3" x="4288" y="1088" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="468" class="PlaceHolder" gid="3" x="4288" y="576" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="436" class="PlaceHolder" gid="3" x="4288" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="479" class="PlaceHolder" gid="3" x="4288" y="512" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="1"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="437" class="PlaceHolder" gid="3" x="4352" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="478" class="PlaceHolder" gid="3" x="4352" y="512" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="2"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="438" class="PlaceHolder" gid="3" x="4416" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="477" class="PlaceHolder" gid="3" x="4416" y="512" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="3"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="439" class="PlaceHolder" gid="3" x="4480" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="476" class="PlaceHolder" gid="3" x="4480" y="512" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="4"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="440" class="PlaceHolder" gid="3" x="4544" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="475" class="PlaceHolder" gid="3" x="4544" y="512" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="5"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="441" class="PlaceHolder" gid="3" x="4608" y="1024" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="6"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="474" class="PlaceHolder" gid="3" x="4608" y="512" width="64" height="64">
+   <properties>
+    <property name="column" type="int" value="6"/>
+    <property name="obstacle" type="int" value="2"/>
+    <property name="row" type="int" value="1"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="19" class="Player" x="64" y="1152" width="64" height="64"/>
+  <object id="19" class="Player" x="128" y="1088" width="64" height="64"/>
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="1000" height="20">
   <data encoding="csv">
