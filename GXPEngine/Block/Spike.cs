@@ -28,7 +28,21 @@ public class Spike : AnimationSpriteAddOn
 
     void Update()
     {
-        x -= (float)xSpeed;
+        /*
+        if (Player.currentlyCrouched)
+        {
+
+            x -= (float)xSpeed * Player.xCrouchSpeed;
+            Player.xCrouchSpeed -= DesignerClass.playerCrouchSpeedDecrease;
+            if (Player.xCrouchSpeed < 0.5) Player.xCrouchSpeed = 0.5f;
+        }
+        else
+        {
+            x -= (float)xSpeed;
+            Player.xCrouchSpeed = DesignerClass.playerCrouchStartingSpeed;
+        }
+
         xSpeed += DesignerClass.XSpeedUp;
+        */
     }
 }

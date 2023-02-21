@@ -9,6 +9,9 @@ using GXPEngine;
 public class Block : Sprite
 {
 
+    private int blockPlaced;
+    public static int checkObstacle = 0;
+
     public event Action BlockDestroyEvent;
     private double xSpeed = DesignerClass.xStartingSpeed;
 
@@ -19,15 +22,32 @@ public class Block : Sprite
         x = pX - width/2f;
         y = pY - height / 2f;
         xSpeed = pXSpeed;
-        Console.WriteLine("created");
-        Console.WriteLine("X: " + x);
-        Console.WriteLine("Y:" + y);
+        blockPlaced++;
+        if (MyGame.placeHolderWithObstacles[checkObstacle] == blockPlaced)
+        {
+            PlaceHolder.currentObstacle++;
+            blockPlaced = 0;
+        }
     }
 
     void Update()
     {
-        x -= (float)xSpeed;
+        /*
+        if (Player.currentlyCrouched)
+        {
+
+            x -= (float)xSpeed * Player.xCrouchSpeed;
+            Player.xCrouchSpeed -= DesignerClass.playerCrouchSpeedDecrease;
+            if (Player.xCrouchSpeed < 0.5) Player.xCrouchSpeed = 0.5f;
+        }
+        else
+        {
+            x -= (float)xSpeed;
+            Player.xCrouchSpeed = DesignerClass.playerCrouchStartingSpeed;
+        }
+
         xSpeed += DesignerClass.XSpeedUp;
+
         /*
         x--;
 

@@ -8,6 +8,8 @@ public class MyGame : Game {
 	public static Player player;
 	List<Ground> ground;
 	List<PlaceHolder> placeHolder;
+    public static int[] placeHolderWithObstacles = new int[DesignerClass.amountOfObstacles] { 0, 0, 0 };
+
     //PlaceHolder placeHolder;
     //List<Block> block;
     public static Block block;
@@ -28,13 +30,13 @@ public class MyGame : Game {
     Level level;
 
     public static bool hitSpike = false;
+    public static bool hitEnd = false;
 
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
         //playerData = new PlayerData();
         LoadLevel(DesignerClass.startLevel);
         OnAfterStep += CheckLoadLevel;
-        EndPoint.EndLevelEvent += EndPoint_EndPointEndLevelEvent;
 
         // Initialize the classes
         //player = new Player();
@@ -43,17 +45,10 @@ public class MyGame : Game {
 
         placeHolder = new List<PlaceHolder>();
         //block = new List<Block>();
+        Console.WriteLine(placeHolderWithObstacles[0]);
+        Console.WriteLine(placeHolderWithObstacles[1]);
 
-		hud = new Hud();
-
-        // Create the ground
-        for (int i = 0; i < (width / DesignerClass.groundWidth) + 1; i++)
-		{
-            for (int j = 0; j < DesignerClass.groundCountDefault; j++)
-            {
-                //ground.Add(new Ground());
-            }
-        }
+        hud = new Hud();
 
 		// Load the ground
         int groundId = 0;
@@ -92,6 +87,7 @@ public class MyGame : Game {
         */
 
         if (hitSpike) ResetCurrentLevel();
+        if (hitEnd) ResetCurrentLevel();
     }
 
     /*
@@ -162,11 +158,6 @@ public class MyGame : Game {
     }
     */
 
-    private void EndPoint_EndPointEndLevelEvent()
-    {
-        ResetCurrentLevel();
-    }
-
     void DestroyAll()
     {
         List<GameObject> children = GetChildren();
@@ -183,7 +174,9 @@ public class MyGame : Game {
             AddChild(new Level(levelToLoad));
             if (levelToLoad != "EndScreen.tmx" && levelToLoad != "MainMenu.tmx")
                 AddChild(new Hud());
-                AddChild(new ControlClass());
+
+            AddChild(new ControlClass());
+            for (int i = 0; i < DesignerClass.amountOfObstacles; i++) placeHolderWithObstacles[i] = 0;
             levelToLoad = null;
         }
     }
@@ -205,6 +198,8 @@ public class MyGame : Game {
         AddChild(new Hud());
         AddChild(new ControlClass());
         hitSpike = false;
+        hitEnd = false;
+        for (int i = 0; i < DesignerClass.amountOfObstacles; i++) placeHolderWithObstacles[i] = 0;
     }
 
     static void Main()                          // Main() is the first method that's called when the program is run
