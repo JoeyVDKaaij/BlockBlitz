@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics.Contracts;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.InteropServices;
 using TiledMapParser;
 
 public class PlaceHolder : AnimationSpriteAddOn
@@ -11,7 +12,7 @@ public class PlaceHolder : AnimationSpriteAddOn
     private double xSpeed = DesignerClass.xStartingSpeed;
 
     private int obstacle;
-    private int currentObstacle = 0;
+    public static int currentObstacle = 0;
     private int column;
     private int row;
 
@@ -25,28 +26,15 @@ public class PlaceHolder : AnimationSpriteAddOn
             row = placeHolderObject.GetIntProperty("row");
             column = placeHolderObject.GetIntProperty("column");
         }
-        width = DesignerClass.groundWidth;
-        height = DesignerClass.groundHeight;
         //x = pX;
-        //y = DesignerClass.wHeight - height * DesignerClass.groundCountDefault + pY * height;
+        //y = DesignerClass.wHeight - height * DesignerClass.groundCountDefault + pY * height; 
+        MyGame.placeHolderWithObstacles[obstacle]++;
+        //Console.WriteLine("Obstacle: " + MyGame.placeHolderWithObstacles[obstacle]);
     }
 
     void Update()
     {
-        x -= (float)xSpeed;
-        xSpeed += DesignerClass.XSpeedUp;
-
-        /*
-        if (player1 == null)
-        {
-            player1 = parent.FindObjectOfType<Player>();
-        }
-        else
-        {
-            Console.WriteLine(parent.FindObjectOfType<Player>().x);
-        }
-        */
-        if (ControlClass.up && x < DesignerClass.wWidth || ControlClass.down && x < DesignerClass.wWidth || ControlClass.left && x < DesignerClass.wWidth || ControlClass.right && x < DesignerClass.wWidth)
+        if (ControlClass.up && x < Level.cameraX + DesignerClass.wWidth || ControlClass.down && x < Level.cameraX + DesignerClass.wWidth || ControlClass.left && x < Level.cameraX + DesignerClass.wWidth || ControlClass.right && x < Level.cameraX + DesignerClass.wWidth)
         {
             if (ControlClass.up)
             {
@@ -64,8 +52,6 @@ public class PlaceHolder : AnimationSpriteAddOn
             {
                 chosenOption = 3;
             }
-            currentObstacle = obstacle;
-            //Console.WriteLine("YAY");
             if (currentObstacle == obstacle)
             {
                 if (DesignerClass.blocks[obstacle, chosenOption, row - 1, column - 1] == 1)
@@ -78,16 +64,6 @@ public class PlaceHolder : AnimationSpriteAddOn
                 }
             }
         }
-        /*
-        Collision placeHolder = MoveUntilCollision(-1, 0);
-
-        if (x + width < 0)
-        {
-            PlaceHolderDestroyEvent.Invoke();
-        }
-
-        if (ControlClass.up) PlaceHolderReplaceWithBlockEvent.Invoke();
-        */
     }
     void replacePlaceHolderWithBlock()
     {

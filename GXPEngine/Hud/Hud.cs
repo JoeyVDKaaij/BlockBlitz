@@ -10,7 +10,7 @@ using TiledMapParser;
 public class Hud : EasyDraw
 {
     public static int currentScore = 0;
-    public static int score = 0;
+    public static int coinCounter = 0;
 
 
     public Hud() : base(DesignerClass.wWidth, DesignerClass.wHeight, false)
@@ -19,11 +19,7 @@ public class Hud : EasyDraw
 
     void Update()
     {
-        /*
-        Clear(Color.Black);
-        Text("Score: " + score, 50, 50);
-        currentScore++;
-        score = currentScore / 5;
-        */
+        ClearTransparent();
+        Text("Coins: " + coinCounter, DesignerClass.coinCounterX, DesignerClass.coinCounterY); 
     }
 }

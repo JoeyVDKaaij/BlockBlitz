@@ -5,6 +5,10 @@ using System.Collections.Generic;
 
 class Level : GameObject
 {
+    public static float cameraX;
+    public static float cameraWidth;
+
+
     Player player;
     TiledLoader loader;
     string currentLevelName;
@@ -54,21 +58,26 @@ class Level : GameObject
     //}
     void Update()
     {
-        if(player!= null)
+        cameraX = x;
+
+        if (player!= null)
         {
             Scrolling();
         }
     }
     void Scrolling()
     {
-        int boundries = 128;  //The screen boudries for scrolling
-        if (player.x + x > game.width - boundries)
-            x = (game.width - boundries) - player.x;
-        if (player.x + x < boundries)
-            x = boundries - player.x;
-        if (player.y + y > game.height - boundries)
-            y = (game.height - boundries) - player.y;
-        if (player.y + y < boundries)
-            y = boundries - player.y;
+        int xBoundriesStart = 128;  //The screen boudries for scrolling
+        int xBoundriesEnd = game.width - (int)Player.playerXStartPosition + 128;  //The screen boudries for scrolling
+        //int xBoundriesEnd = 128;  //The screen boudries for scrolling
+        int yBoundries = 128;  //The screen boudries for scrolling
+        if (player.x + x > game.width - xBoundriesEnd)
+            x = (game.width - xBoundriesEnd) - player.x;
+        if (player.x + x < xBoundriesStart)
+            x = xBoundriesStart - player.x;
+        if (player.y + y > game.height - yBoundries)
+            y = (game.height - yBoundries) - player.y;
+        if (player.y + y < yBoundries)
+            y = yBoundries - player.y;
     }
 }
