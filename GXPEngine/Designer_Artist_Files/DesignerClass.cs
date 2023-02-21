@@ -38,11 +38,7 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-<<<<<<< HEAD
     public const double xStartingSpeed = 2;
-=======
-    public const double xStartingSpeed = 5;
->>>>>>> beta
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.001;
@@ -50,8 +46,8 @@ public class DesignerClass
     // Which level the game starts with
     // Note that reaching the end doesn't send you to the next level
     public static string startLevel =
-    "testmap.tmx";
-    //"level1.tmx";
+    //"testmap.tmx";
+    "level1.tmx";
 
     // Position of the coin counter
     public const int coinCounterX = 50;
