@@ -8,8 +8,12 @@ public class MyGame : Game {
 	public static Player player;
 	List<Ground> ground;
 	List<PlaceHolder> placeHolder;
-	List<Block> block;
-	Hud hud;
+    //PlaceHolder placeHolder;
+    //List<Block> block;
+    public static Block block;
+    public Spike spike;
+
+    Hud hud;
     EndPoint endPoint;
 
     public static bool currentObstacleOnScreen = false;
@@ -22,6 +26,8 @@ public class MyGame : Game {
     private SoundChannel backgroundMusicSC;
     //public readonly PlayerData playerData;
     Level level;
+
+    public static bool hitSpike = false;
 
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
@@ -36,7 +42,7 @@ public class MyGame : Game {
         ground = new List<Ground>();
 
         placeHolder = new List<PlaceHolder>();
-        block = new List<Block>();
+        //block = new List<Block>();
 
 		hud = new Hud();
 
@@ -74,6 +80,7 @@ public class MyGame : Game {
 
 	// For every game object, Update is called every frame, by the engine:
 	void Update() {
+        /*
 		if (placeHolder.Count > 0)
 		{
 			Ground.canSpawnObstacle = false;
@@ -82,7 +89,9 @@ public class MyGame : Game {
 		{
 			Ground.canSpawnObstacle = true;
 		}
-        Console.WriteLine(ground.Count);
+        */
+
+        if (hitSpike) ResetCurrentLevel();
     }
 
     /*
@@ -195,6 +204,7 @@ public class MyGame : Game {
         AddChild(new Level(currentLevel));
         AddChild(new Hud());
         AddChild(new ControlClass());
+        hitSpike = false;
     }
 
     static void Main()                          // Main() is the first method that's called when the program is run
