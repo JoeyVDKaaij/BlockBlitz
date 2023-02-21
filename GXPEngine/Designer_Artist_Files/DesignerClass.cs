@@ -26,17 +26,116 @@ public class DesignerClass
     // How many grounds from the bottom of the screen are there at default
     public const int groundCountDefault = 3;
 
+    // Set the starting speed per pixel
+    public const double xStartingSpeed = 1;
+
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.001;
 
     // Which level the game starts with
     // Note that reaching the end doesn't send you to the next level
-    public static string startLevel =
+    public const string startLevel =
     "testmap.tmx";
+    //"level1.tmx";
+    //"testmap.tmx";
+    //"testmap.tmx";
 
     // Add the songs for each level in this array (if two songs are the same name the same file twice)
     // Doesn't work yet
     public static string[] levelSoundTrack = { "", "", "" };
 
+    public static int[,,,] blocks =
+        {
+            {
+                {
+                    { 0, 1, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 1, 0, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+                {
+                    { 0, 1, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 1, 0, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+                {
+                    { 0, 1, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 1, 0, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+        };
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }

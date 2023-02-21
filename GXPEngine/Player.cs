@@ -10,12 +10,14 @@ using TiledMapParser;
 public class Player : AnimationSpriteAddOn
 {
     private float ySpeed;
+    public static float playerXStartPosition;
 
     public Player(TiledObject tiledObjectPlayer = null) : base("barry.png", 7, 1, -1, false, true)
     {
         if (tiledObjectPlayer != null)
         {
-            ySpeed = tiledObjectPlayer.GetFloatProperty("ySpeed", 1f);
+            ySpeed = tiledObjectPlayer.GetFloatProperty("ySpeed");
+            playerXStartPosition = tiledObjectPlayer.GetFloatProperty("X");
         }
         width = DesignerClass.playerWidth;
         height = DesignerClass.playerHeight;
@@ -36,6 +38,12 @@ public class Player : AnimationSpriteAddOn
             {
                 y -= 1;
                 ySpeed = -DesignerClass.playerJumpHeight;
+            }
+
+            if (c.other is Spike)
+            {
+                Console.WriteLine("YAY");
+                MyGame.hitSpike = true;
             }
         }
         else
