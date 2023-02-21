@@ -13,6 +13,7 @@ public class ControlClass : GameObject
     static public bool left;
     static public bool right;
     static public bool jump;
+    static public bool crouch;
 
     void Update()
     {
@@ -24,5 +25,6 @@ public class ControlClass : GameObject
         left = Input.GetKey(Key.A) || Input.GetKey(Key.LEFT);
         right = Input.GetKey(Key.D) || Input.GetKey(Key.RIGHT);
         jump = Input.GetKey(Key.SPACE);
+        crouch = Input.GetKey(Key.K);
     }
 }
