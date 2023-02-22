@@ -1,4 +1,5 @@
 ﻿using GXPEngine;
+using GXPEngine.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,23 +7,22 @@ using System.Text;
 using System.Threading.Tasks;
 using TiledMapParser;
 
-public class Ground : AnimationSpriteAddOn
+public class Spike : AnimationSpriteAddOn
 {
     public event Action GroundSpawnEvent;
     public event Action BlockObstacleSpawnEvent;
     public event Action GroundDestroyEvent;
 
     public static bool spawnObstacle = false;
-    private int obstacle = 0;
     public static int abilityToSpawnCooldown = 2;
     public static bool canSpawnObstacle = true;
     private double xSpeed = DesignerClass.xStartingSpeed;
 
-    public Ground(string fileName, int colums, int rows, TiledObject groundObject = null) : base(fileName, colums, rows, -1, false, true)
+    public Spike(string fileName, int colums, int rows, TiledObject spikeObject = null) : base(fileName, colums, rows, -1, false, true)
     {
-        if (groundObject != null)
+        if (spikeObject != null)
         {
-            
+
         }
     }
 
@@ -31,6 +31,7 @@ public class Ground : AnimationSpriteAddOn
         /*
         if (Player.currentlyCrouched)
         {
+
             x -= (float)xSpeed * Player.xCrouchSpeed;
             Player.xCrouchSpeed -= DesignerClass.playerCrouchSpeedDecrease;
             if (Player.xCrouchSpeed < 0.5) Player.xCrouchSpeed = 0.5f;
@@ -42,33 +43,6 @@ public class Ground : AnimationSpriteAddOn
         }
 
         xSpeed += DesignerClass.XSpeedUp;
-
-        /*
-        if (x + width < 0)
-        {
-            if (y >= DesignerClass.wHeight - height && spawnObstacle)
-            {
-                if (obstacle == 0)
-                {
-                    BlockObstacleSpawnEvent.Invoke();
-                    abilityToSpawnCooldown--;
-                }
-            }
-            else if (y >= DesignerClass.wHeight - height)
-            {
-                GroundSpawnEvent.Invoke();
-            }
-
-            LateDestroy();
-
-            if (abilityToSpawnCooldown == 0) spawnObstacle = false;
-        }
-
-        if (Hud.score % 100 == 1 && Hud.score > 80 && canSpawnObstacle)
-        {
-            spawnObstacle = true;
-            abilityToSpawnCooldown = 2;
-        }
         */
     }
 }

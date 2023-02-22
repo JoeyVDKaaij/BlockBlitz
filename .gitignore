@@ -3,3 +3,5 @@ GXPEngine/obj
 GXPEngine.userprefs
 GXPEngine/bin/Debug/lib
 GXPEngine/bin/Release
+GXPEngine/bin/Debug/GXPEngine.exe
+GXPEngine/bin/Debug/GXPEngine.pdb
