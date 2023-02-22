@@ -38,7 +38,7 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-    public const double xStartingSpeed = 2;
+    public const double xStartingSpeed = 5;
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.001;
@@ -249,12 +249,18 @@ public class DesignerClass
     // If not changed you should hear the Goat simulator dance music.
     public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 1;
+    public const float backgroundMusicVolume = 0f;
 
-    public const float soundEffectVolume = 1;
+    public const float soundEffectVolume = 0f;
 
-    public const string jumpSoundEffect = "ping.wav";
+    public static string[] jumpSoundEffect = { "ping.wav", "ping.wav", "ping.wav" };
 
     public const string slideSoundEffect = "ping.wav";
+
+    public const string grabCoinSoundEffect = "ping.wav";
+
+    public const string deathSoundEffect = "ping.wav";
+    
+    public const string placeBlockSoundEffect = "ping.wav";
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }
