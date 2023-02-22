@@ -23,13 +23,13 @@ public class DesignerClass
     public const float playerCrouchStartingSpeed = 4;
 
     // How much the speed decreases per frame. Keep the f at the end for it to work
-    public const float playerCrouchSpeedDecrease = 0.2f;
+    public const float playerCrouchSpeedDecrease = 0.1f;
 
     // Will the player sit still after crouching for a long enough time
     public const bool crouchStill = false;
 
     // Minimum speed that the player slides (keep the f at the end)
-    public const float crouchMinSpeed = 0.1f;
+    public const float crouchMinSpeed = 1.5f;
 
     // Ground Variables
     public const int amountOfObstacles = 3;

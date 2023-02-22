@@ -79,9 +79,7 @@ public class Player : AnimationSpriteAddOn
                 SetCycle(ArtistClass.playerJumpFrame - 1, 1);
             }
 
-            Console.WriteLine(c.other.y < y);
-
-
+            /*
             if (c.other.y < y && keepCollisionSlideX == 0)
             {
                 if (!collisionNeedsSlide)
@@ -98,6 +96,13 @@ public class Player : AnimationSpriteAddOn
                 collisionNeedsSlide = false;
                 y -= height / 2;
                 height = maxHeight;
+            }
+            */
+
+            if (!(c.other is Block) && c.other.x > x + 10 && c.other.y < y + 86 && c.other.y > y && !currentlyCrouched || c.other is Block && c.other.x > x + 10 && c.other.y < y && !currentlyCrouched)
+            {
+                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                MyGame.hitSpike = true;
             }
 
             // Crouch
@@ -123,8 +128,8 @@ public class Player : AnimationSpriteAddOn
             // If it's something else continue walking
             if (c.other is Spike)
             {
+                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
                 MyGame.hitSpike = true;
-                soundEffectSC = grabTheCoinSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
             }
             else if (c.other is EndPoint)
             {
@@ -132,7 +137,7 @@ public class Player : AnimationSpriteAddOn
             }
             else if (c.other is Coin)
             {
-                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                soundEffectSC = grabTheCoinSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
                 c.other.LateDestroy();
                 Hud.coinCounter++;
             }
