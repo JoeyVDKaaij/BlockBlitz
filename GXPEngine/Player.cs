@@ -19,13 +19,19 @@ public class Player : AnimationSpriteAddOn
     public static bool currentlyCrouched = false;
     public static float xCrouchSpeed = DesignerClass.playerCrouchStartingSpeed;
 
-    private bool crouchButtonReleased = true;
+    private float keepCollisionSlideX = 0;
+    private bool collisionNeedsSlide = false;
 
     private SoundChannel soundEffectSC;
 
-    Sound jumpSoundEffect = new Sound(DesignerClass.jumpSoundEffect);
-    Sound crouchSoundEffect = new Sound(DesignerClass.jumpSoundEffect);
+    public static float playerX;
 
+    Sound crouchSoundEffect = new Sound(DesignerClass.slideSoundEffect);
+    Sound grabTheCoinSoundEffect = new Sound(DesignerClass.grabCoinSoundEffect);
+    Sound deadSoundEffect = new Sound(DesignerClass.deathSoundEffect);
+
+    public Random rand = new Random();
+    
     public Player(TiledObject tiledObjectPlayer = null) : base(ArtistClass.playerFileName, ArtistClass.playerColumn, ArtistClass.playerRow, -1, false, true)
     {
         if (tiledObjectPlayer != null)
@@ -42,10 +48,13 @@ public class Player : AnimationSpriteAddOn
 
         if (soundEffectSC != null)
             soundEffectSC.Stop();
+
     }
 
     void Update()
     {
+        playerX = x;
+
         Animate(0.2f);
         //Collision c = MoveUntilCollision(xSpeed, ySpeed);
         Collision c = MoveUntilCollision(xSpeed, ySpeed);
@@ -63,44 +72,63 @@ public class Player : AnimationSpriteAddOn
             // Jump
             if (ControlClass.jump)
             {
+                Sound jumpSoundEffect = new Sound(DesignerClass.jumpSoundEffect[rand.Next(3)]);
                 soundEffectSC = jumpSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
                 y -= 1;
                 ySpeed = -DesignerClass.playerJumpHeight;
                 SetCycle(ArtistClass.playerJumpFrame - 1, 1);
             }
 
+            /*
+            if (c.other.y < y && keepCollisionSlideX == 0)
+            {
+                if (!collisionNeedsSlide)
+                {
+                    keepCollisionSlideX = c.other.y;
+                    SetCycle(ArtistClass.playerCrouchFrame - 1, 1);
+                    collisionNeedsSlide = true;
+                    height = height / 2;
+                    y += height / 2;
+                }
+            }
+            else if (collisionNeedsSlide && keepCollisionSlideX != y - height / 2)
+            {
+                collisionNeedsSlide = false;
+                y -= height / 2;
+                height = maxHeight;
+            }
+            */
+
+            if (!(c.other is Block) && c.other.x > x + 10 && c.other.y < y + 86 && c.other.y > y && !currentlyCrouched || c.other is Block && c.other.x > x + 10 && c.other.y < y && !currentlyCrouched)
+            {
+                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                MyGame.hitSpike = true;
+            }
+
             // Crouch
             if (ControlClass.crouch)
             {
-                if (crouchButtonReleased)
-                {
-                    soundEffectSC = crouchSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
-                    crouchButtonReleased = false;
-                }
-                SetCycle(ArtistClass.playerCrouchFrame - 1, 1);
                 if (!currentlyCrouched)
                 {
+                    soundEffectSC = crouchSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                    currentlyCrouched = true;
                     height = height / 2;
                     y += height / 2;
-                    currentlyCrouched = true;
                 }
+                SetCycle(ArtistClass.playerCrouchFrame - 1, 1);
             }
             else if (currentlyCrouched)
             {
-                currentlyCrouched = false;
-                y -= height / 2;
-                height = maxHeight;
-                crouchButtonReleased = false;
-            }
-            else
-            {
-                crouchButtonReleased = true;
+                    currentlyCrouched = false;
+                    y -= height / 2;
+                    height = maxHeight;
             }
 
             // If the spike got got hit reset the level
             // If it's something else continue walking
             if (c.other is Spike)
             {
+                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
                 MyGame.hitSpike = true;
             }
             else if (c.other is EndPoint)
@@ -109,6 +137,7 @@ public class Player : AnimationSpriteAddOn
             }
             else if (c.other is Coin)
             {
+                soundEffectSC = grabTheCoinSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
                 c.other.LateDestroy();
                 Hud.coinCounter++;
             }

@@ -23,13 +23,13 @@ public class DesignerClass
     public const float playerCrouchStartingSpeed = 4;
 
     // How much the speed decreases per frame. Keep the f at the end for it to work
-    public const float playerCrouchSpeedDecrease = 0.2f;
+    public const float playerCrouchSpeedDecrease = 0.1f;
 
     // Will the player sit still after crouching for a long enough time
     public const bool crouchStill = false;
 
     // Minimum speed that the player slides (keep the f at the end)
-    public const float crouchMinSpeed = 0.1f;
+    public const float crouchMinSpeed = 1.5f;
 
     // Ground Variables
     public const int amountOfObstacles = 3;
@@ -38,7 +38,7 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-    public const double xStartingSpeed = 2;
+    public const double xStartingSpeed = 5;
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.001;
@@ -249,12 +249,18 @@ public class DesignerClass
     // If not changed you should hear the Goat simulator dance music.
     public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 1;
+    public const float backgroundMusicVolume = 0f;
 
-    public const float soundEffectVolume = 1;
+    public const float soundEffectVolume = 0f;
 
-    public const string jumpSoundEffect = "ping.wav";
+    public static string[] jumpSoundEffect = { "ping.wav", "ping.wav", "ping.wav" };
 
     public const string slideSoundEffect = "ping.wav";
+
+    public const string grabCoinSoundEffect = "ping.wav";
+
+    public const string deathSoundEffect = "ping.wav";
+    
+    public const string placeBlockSoundEffect = "ping.wav";
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }

@@ -17,6 +17,7 @@ public class PlaceHolder : AnimationSpriteAddOn
     private int row;
 
     private int chosenOption;
+    private float placeHolderX;
 
     public PlaceHolder(string fileName, int colums, int rows, TiledObject placeHolderObject = null) : base(fileName, colums, rows, -1, false, false)
     {
@@ -25,6 +26,7 @@ public class PlaceHolder : AnimationSpriteAddOn
             obstacle = placeHolderObject.GetIntProperty("obstacle");
             row = placeHolderObject.GetIntProperty("row");
             column = placeHolderObject.GetIntProperty("column");
+            placeHolderX = placeHolderObject.X;
         }
         //x = pX;
         //y = DesignerClass.wHeight - height * DesignerClass.groundCountDefault + pY * height; 
@@ -34,44 +36,50 @@ public class PlaceHolder : AnimationSpriteAddOn
 
     void Update()
     {
-        if (ControlClass.up && x < Level.cameraX + DesignerClass.wWidth || ControlClass.down && x < Level.cameraX + DesignerClass.wWidth || ControlClass.left && x < Level.cameraX + DesignerClass.wWidth || ControlClass.right && x < Level.cameraX + DesignerClass.wWidth)
+        if (ControlClass.up && x < Player.playerX + game.width || ControlClass.down && x < Player.playerX + game.width || ControlClass.left && x < Player.playerX + game.width || ControlClass.right && x < Player.playerX + game.width)
         {
             if (ControlClass.up)
             {
                 chosenOption = 0;
+                CheckBlock(chosenOption);
             }
             else if (ControlClass.left)
             {
                 chosenOption = 1;
+                CheckBlock(chosenOption);
             }
             else if (ControlClass.down)
             {
                 chosenOption = 2;
+                CheckBlock(chosenOption);
             }
             else if (ControlClass.right)
             {
                 chosenOption = 3;
-            }
-            if (currentObstacle == obstacle)
-            {
-                if (DesignerClass.blocks[obstacle, chosenOption, row - 1, column - 1] == 1)
-                {
-                    replacePlaceHolderWithBlock();
-                }
-                else if (DesignerClass.blocks[currentObstacle, chosenOption, row - 1, column - 1] == 0)
-                {
-                    deletePlaceHolder();
-                }
+                CheckBlock(chosenOption);
             }
         }
     }
-    void replacePlaceHolderWithBlock()
+
+    void CheckBlock(int pChosenOption)
+    {
+        if (DesignerClass.blocks[obstacle, pChosenOption, row - 1, column - 1] == 1)
+        {
+            ReplacePlaceHolderWithBlock();
+        }
+        else
+        {
+            DeletePlaceHolder();
+        }
+    }
+
+    void ReplacePlaceHolderWithBlock()
     {
         Block temp = new Block(x, y, xSpeed);
         parent.AddChild(temp);
     }
 
-    void deletePlaceHolder()
+    void DeletePlaceHolder()
     {
         LateDestroy();
     }
