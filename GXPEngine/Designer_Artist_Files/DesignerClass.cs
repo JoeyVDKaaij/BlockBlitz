@@ -23,11 +23,7 @@ public class DesignerClass
     public const float playerCrouchStartingSpeed = 2;
 
     // How much the speed decreases per frame. Keep the f at the end for it to work
-<<<<<<< HEAD
     public const float playerCrouchSpeedDecrease = 0.1f;
-=======
-    public const float playerCrouchSpeedDecrease = 0.025f;
->>>>>>> a92e521b842f8d751030cd2c13d7c5ca9beb57c6
 
     // Will the player sit still after crouching for a long enough time
     public const bool crouchStill = false;
@@ -42,11 +38,7 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-<<<<<<< HEAD
     public const double xStartingSpeed = 5;
-=======
-    public const double xStartingSpeed = 3;
->>>>>>> a92e521b842f8d751030cd2c13d7c5ca9beb57c6
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.0015;
@@ -448,7 +440,6 @@ public class DesignerClass
 
     public const float soundEffectVolume = 0f;
 
-<<<<<<< HEAD
     public static string[] jumpSoundEffect = { "ping.wav", "ping.wav", "ping.wav" };
 
     public const string slideSoundEffect = "ping.wav";
@@ -458,10 +449,5 @@ public class DesignerClass
     public const string deathSoundEffect = "ping.wav";
     
     public const string placeBlockSoundEffect = "ping.wav";
-=======
-    public const string jumpSoundEffect = "Slide.wav";
-
-    public const string slideSoundEffect = "Slide.wav";
->>>>>>> a92e521b842f8d751030cd2c13d7c5ca9beb57c6
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }
