@@ -14,6 +14,5 @@ public class Coin : AnimationSpriteAddOn
         if (coinObject != null)
         {
         }
-        Console.WriteLine("YAY");
     }
 }

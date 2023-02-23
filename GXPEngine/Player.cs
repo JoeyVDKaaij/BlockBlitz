@@ -31,13 +31,16 @@ public class Player : AnimationSpriteAddOn
     Sound deadSoundEffect = new Sound(DesignerClass.deathSoundEffect);
 
     public Random rand = new Random();
-    
+
+    private bool mainMenu = false;
+
     public Player(TiledObject tiledObjectPlayer = null) : base(ArtistClass.playerFileName, ArtistClass.playerColumn, ArtistClass.playerRow, -1, false, true)
     {
         if (tiledObjectPlayer != null)
         {
             ySpeed = tiledObjectPlayer.GetFloatProperty("ySpeed");
             playerXStartPosition = tiledObjectPlayer.GetFloatProperty("X");
+            mainMenu = tiledObjectPlayer.GetBoolProperty("Menu");
         }
         //x = DesignerClass.playerSpawnX;
         //y = DesignerClass.playerSpawnY;
@@ -53,6 +56,11 @@ public class Player : AnimationSpriteAddOn
 
     void Update()
     {
+        if (mainMenu)
+        {
+            xSpeed = 0;
+        }
+
         playerX = x;
 
         Animate(0.2f);

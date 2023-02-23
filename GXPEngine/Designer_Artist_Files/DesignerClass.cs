@@ -9,7 +9,7 @@ public class DesignerClass
     // Game Window Variables
     public const int wWidth = 1920;
     public const int wHeight = 1080;
-    public const bool fullScreen = true;
+    public const bool fullScreen = false;
 
     // Player Variable;
     public const int playerSpawnX = 100;
@@ -47,7 +47,8 @@ public class DesignerClass
     // Note that reaching the end doesn't send you to the next level
     public static string startLevel =
     //"testmap.tmx";
-    "level1.tmx";
+    "MainMenu.tmx";
+    //"level1.tmx";
 
     // Position of the coin counter
     public const int coinCounterX = 50;
@@ -438,7 +439,7 @@ public class DesignerClass
 
     public const float backgroundMusicVolume = 0.2f;
 
-    public const float soundEffectVolume = 1f;
+    public const float soundEffectVolume = 0.5f;
 
     public static string[] jumpSoundEffect = { "Jumping sound 1.wav", "Jumping sound 2.wav", "Jumping sound 3.wav" };
 

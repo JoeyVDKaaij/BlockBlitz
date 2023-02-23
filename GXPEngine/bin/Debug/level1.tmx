@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="1000" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="21" nextobjectid="9305">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="1000" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="21" nextobjectid="9307">
  <tileset firstgid="1" name="square" tilewidth="64" tileheight="64" tilecount="1" columns="1">
   <image source="square.png" width="64" height="64"/>
  </tileset>
@@ -84,7 +84,7 @@
  <imagelayer id="17" name="Image Layer 4" offsetx="3328" offsety="1792">
   <image source="choose block.png" width="989" height="256"/>
  </imagelayer>
- <objectgroup id="5" name="Ground">
+ <objectgroup id="5" name="Ground" locked="1">
   <object id="6" class="Ground" gid="5" x="128" y="2368" width="64" height="64"/>
   <object id="986" class="Ground" gid="5" x="0" y="2368" width="64" height="64"/>
   <object id="7" class="Ground" gid="5" x="192" y="2368" width="64" height="64"/>
@@ -9459,7 +9459,11 @@
   <object id="9049" class="Coin" gid="19" x="28672" y="2624" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="990" class="Player" x="64" y="2112" width="128" height="128"/>
+  <object id="990" class="Player" x="128" y="2112" width="128" height="128">
+   <properties>
+    <property name="Menu" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="1000" height="50">
   <data encoding="csv">

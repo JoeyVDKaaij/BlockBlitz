@@ -36,30 +36,7 @@ class Level : GameObject
         y = 128 - player.y + 500; 
         //x = 128 + player.x;
     }
-    //public void PlayerDeath()
-    //{
-    //    Console.WriteLine("Player dies");
-    //    PlayerData data = ((MyGame)game.playerData);
 
-    //    //Prevent the die-twice bug
-    //    if (respawn || data.lives <= 0)
-    //    {
-    //        Console.WriteLine("...for the second time");
-    //        return;
-    //    }
-
-    //    data.lives--;
-
-    //    if (data.lives <= 0)
-    //    {
-    //        ((MyGame)game).LoadLevel("nameOfLevel/currentLevel");
-    //    }
-    //    else
-    //    {
-    //        //repawn=true; //for smart respawn
-    //        ((MyGame)game).LoadLevel(currentLevelName);
-    //    }
-    //}
     void Update()
     {
         cameraX = x;
@@ -74,7 +51,7 @@ class Level : GameObject
         int xBoundriesStart = (int)Player.playerXStartPosition;  //The screen boudries for scrolling
         int xBoundriesEnd = 1720;  //The screen boudries for scrolling
         //int xBoundriesEnd = 128;  //The screen boudries for scrolling
-        int yBoundriesStart = 128;  //The screen boudries for scrolling
+        int yBoundriesStart = 500;  //The screen boudries for scrolling
         int yBoundriesEnd = 128;  //The screen boudries for scrolling
 
 

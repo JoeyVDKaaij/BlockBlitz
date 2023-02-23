@@ -7,18 +7,24 @@ using System.Threading.Tasks;
 using GXPEngine;
 using TiledMapParser;
 
-public class Hud : EasyDraw
+public class Menu : Sprite
 {
     public static int currentScore = 0;
     public static int coinCounter = 0;
 
-    public Hud() : base(DesignerClass.wWidth, DesignerClass.wHeight, false)
+    public Menu() : base(ArtistClass.mainMenuFileName, false, false)
     {
+        width = (int)(game.width / 3 * 2.4);
+        height = (int)(game.height / 3 * 2.4);
+        x = 0;
+        y = 0;
     }
 
     void Update()
     {
-            ClearTransparent();
-            Text("Coins: " + coinCounter, DesignerClass.coinCounterX, DesignerClass.coinCounterY);
+        if (ControlClass.plus)
+        {
+            MyGame.plus = true;
+        }
     }
 }

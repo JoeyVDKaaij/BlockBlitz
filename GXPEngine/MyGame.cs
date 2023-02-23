@@ -32,6 +32,9 @@ public class MyGame : Game {
     public static bool hitSpike = false;
     public static bool hitEnd = false;
 
+    public static bool plus = false;
+    public static bool minusReleased = true;
+
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
         //playerData = new PlayerData();
@@ -45,8 +48,6 @@ public class MyGame : Game {
 
         placeHolder = new List<PlaceHolder>();
         //block = new List<Block>();
-        Console.WriteLine(placeHolderWithObstacles[0]);
-        Console.WriteLine(placeHolderWithObstacles[1]);
 
         hud = new Hud();
 
@@ -88,6 +89,17 @@ public class MyGame : Game {
 
         if (hitSpike) ResetCurrentLevel();
         if (hitEnd) ResetCurrentLevel();
+        if (plus) LoadLevel("level1.tmx");
+        if (ControlClass.minus && minusReleased)
+        {
+            minusReleased = false;
+            ResetCurrentLevel();
+        }
+        else if (!ControlClass.minus)
+        { 
+            minusReleased = true;
+        }
+
     }
 
     /*
@@ -173,7 +185,14 @@ public class MyGame : Game {
             DestroyAll();
             AddChild(new Level(levelToLoad));
             if (levelToLoad != "EndScreen.tmx" && levelToLoad != "MainMenu.tmx")
+            {
                 AddChild(new Hud());
+            }
+            else
+            {
+                AddChild(new Menu());
+            }
+
 
             AddChild(new ControlClass());
             for (int i = 0; i < DesignerClass.amountOfObstacles; i++) placeHolderWithObstacles[i] = 0;
@@ -188,9 +207,10 @@ public class MyGame : Game {
         backgroundMusicSC = backgroundMusic.Play(false, 0, DesignerClass.backgroundMusicVolume, 0);
         levelToLoad = filename;
         currentLevel = filename;
+        plus = false;
     }
 
-    public void ResetCurrentLevel()
+    public void ResetCurrentLevel(int currentLevelSoundTrack = 1)
     {
         DestroyAll();
         //playerData.Reset();
@@ -199,7 +219,12 @@ public class MyGame : Game {
         AddChild(new ControlClass());
         hitSpike = false;
         hitEnd = false;
+        plus = false;
         for (int i = 0; i < DesignerClass.amountOfObstacles; i++) placeHolderWithObstacles[i] = 0;
+        if (backgroundMusicSC != null)
+            backgroundMusicSC.Stop();
+        Sound backgroundMusic = new Sound(DesignerClass.levelSoundTrack[currentLevelSoundTrack]);
+        backgroundMusicSC = backgroundMusic.Play(false, 0, DesignerClass.backgroundMusicVolume, 0);
     }
 
     static void Main()                          // Main() is the first method that's called when the program is run
