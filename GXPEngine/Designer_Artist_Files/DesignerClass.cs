@@ -434,20 +434,20 @@ public class DesignerClass
 
     // Add the songs for the title screen, level and possibly the end screen in that order from left to right.
     // If not changed you should hear the Goat simulator dance music.
-    public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3" };
+    public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 0f;
+    public const float backgroundMusicVolume = 0.2f;
 
-    public const float soundEffectVolume = 0f;
+    public const float soundEffectVolume = 1f;
 
-    public static string[] jumpSoundEffect = { "ping.wav", "ping.wav", "ping.wav" };
+    public static string[] jumpSoundEffect = { "Jumping sound 1.wav", "Jumping sound 2.wav", "Jumping sound 3.wav" };
 
-    public const string slideSoundEffect = "ping.wav";
+    public const string slideSoundEffect = "Slide.wav";
 
-    public const string grabCoinSoundEffect = "ping.wav";
+    public const string grabCoinSoundEffect = "Coin collect.wav";
 
-    public const string deathSoundEffect = "ping.wav";
+    public const string deathSoundEffect = "Death.wav";
     
-    public const string placeBlockSoundEffect = "ping.wav";
+    public const string placeBlockSoundEffect = "Block placement.wav";
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }
