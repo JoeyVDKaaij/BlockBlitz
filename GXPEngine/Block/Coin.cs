@@ -13,7 +13,19 @@ public class Coin : AnimationSpriteAddOn
     {
         if (coinObject != null)
         {
+            visible = false;
         }
-        Console.WriteLine("YAY");
+    }
+
+    void Update()
+    {
+        if (x < Player.playerX + 1920 && x > Player.playerX - 64 * 4)
+        {
+            visible = true;
+        }
+        else
+        {
+            visible = false;
+        }
     }
 }

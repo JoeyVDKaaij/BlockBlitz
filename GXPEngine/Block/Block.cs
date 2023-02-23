@@ -15,7 +15,7 @@ public class Block : Sprite
     public event Action BlockDestroyEvent;
     private double xSpeed = DesignerClass.xStartingSpeed;
 
-    public Block(float pX, float pY, double pXSpeed) : base("colors.png", false, true)
+    public Block(float pX, float pY, double pXSpeed) : base(ArtistClass.blockFileName, false, true)
     {
         width = 64;
         height = 64;
@@ -28,33 +28,18 @@ public class Block : Sprite
             PlaceHolder.currentObstacle++;
             blockPlaced = 0;
         }
+        visible = false;
     }
 
     void Update()
     {
-        /*
-        if (Player.currentlyCrouched)
+        if (x < Player.playerX + 1920 && x > Player.playerX - 64 * 4)
         {
-
-            x -= (float)xSpeed * Player.xCrouchSpeed;
-            Player.xCrouchSpeed -= DesignerClass.playerCrouchSpeedDecrease;
-            if (Player.xCrouchSpeed < 0.5) Player.xCrouchSpeed = 0.5f;
+            visible = true;
         }
         else
         {
-            x -= (float)xSpeed;
-            Player.xCrouchSpeed = DesignerClass.playerCrouchStartingSpeed;
+            visible = false;
         }
-
-        xSpeed += DesignerClass.XSpeedUp;
-
-        /*
-        x--;
-
-        if (x + width < 0)
-        {
-            BlockDestroyEvent.Invoke();
-        }
-        */
     }
 }

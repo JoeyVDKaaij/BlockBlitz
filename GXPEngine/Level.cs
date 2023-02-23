@@ -31,31 +31,12 @@ class Level : GameObject
 
         player = FindObjectOfType<Player>();
         if(player != null ) { AddChild(player); }
+
+        //y = (game.height - 128) - player.y; 
+        y = 128 - player.y + 250; 
+        //x = 128 + player.x;
     }
-    //public void PlayerDeath()
-    //{
-    //    Console.WriteLine("Player dies");
-    //    PlayerData data = ((MyGame)game.playerData);
 
-    //    //Prevent the die-twice bug
-    //    if (respawn || data.lives <= 0)
-    //    {
-    //        Console.WriteLine("...for the second time");
-    //        return;
-    //    }
-
-    //    data.lives--;
-
-    //    if (data.lives <= 0)
-    //    {
-    //        ((MyGame)game).LoadLevel("nameOfLevel/currentLevel");
-    //    }
-    //    else
-    //    {
-    //        //repawn=true; //for smart respawn
-    //        ((MyGame)game).LoadLevel(currentLevelName);
-    //    }
-    //}
     void Update()
     {
         cameraX = x;
@@ -67,17 +48,20 @@ class Level : GameObject
     }
     void Scrolling()
     {
-        int xBoundriesStart = 128;  //The screen boudries for scrolling
-        int xBoundriesEnd = game.width - (int)Player.playerXStartPosition + 128;  //The screen boudries for scrolling
+        int xBoundriesStart = (int)Player.playerXStartPosition;  //The screen boudries for scrolling
+        int xBoundriesEnd = 1720;  //The screen boudries for scrolling
         //int xBoundriesEnd = 128;  //The screen boudries for scrolling
-        int yBoundries = 128;  //The screen boudries for scrolling
+        int yBoundriesStart = 500;  //The screen boudries for scrolling
+        int yBoundriesEnd = 128;  //The screen boudries for scrolling
+
+
         if (player.x + x > game.width - xBoundriesEnd)
             x = (game.width - xBoundriesEnd) - player.x;
         if (player.x + x < xBoundriesStart)
             x = xBoundriesStart - player.x;
-        if (player.y + y > game.height - yBoundries)
-            y = (game.height - yBoundries) - player.y;
-        if (player.y + y < yBoundries)
-            y = yBoundries - player.y;
+        if (player.y + y > game.height - yBoundriesStart)
+            y = (game.height - yBoundriesStart) - player.y;
+        if (player.y + y < yBoundriesEnd)
+            y = yBoundriesEnd - player.y;
     }
 }

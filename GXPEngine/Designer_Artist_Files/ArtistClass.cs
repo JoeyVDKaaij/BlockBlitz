@@ -14,5 +14,9 @@ public class ArtistClass
     public const int playerJumpFrame = 9;
     public const int playerCrouchFrame = 11;
 
+    public const string blockFileName = "PinkBlock.png";
+
+    public const string mainMenuFileName = "MainMenu.png";
+
     // Change the height and position in DesignerClass.cs
 }

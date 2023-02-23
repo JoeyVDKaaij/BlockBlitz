@@ -27,6 +27,7 @@ public class PlaceHolder : AnimationSpriteAddOn
             row = placeHolderObject.GetIntProperty("row");
             column = placeHolderObject.GetIntProperty("column");
             placeHolderX = placeHolderObject.X;
+            visible = false;
         }
         //x = pX;
         //y = DesignerClass.wHeight - height * DesignerClass.groundCountDefault + pY * height; 
@@ -36,6 +37,15 @@ public class PlaceHolder : AnimationSpriteAddOn
 
     void Update()
     {
+        if (x < Player.playerX + 1920 && x > Player.playerX - 64 * 4)
+        {
+            visible = true;
+        }
+        else
+        {
+            visible = false;
+        }
+
         if (ControlClass.up && x < Player.playerX + game.width || ControlClass.down && x < Player.playerX + game.width || ControlClass.left && x < Player.playerX + game.width || ControlClass.right && x < Player.playerX + game.width)
         {
             if (ControlClass.up)

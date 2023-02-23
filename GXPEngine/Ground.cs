@@ -22,53 +22,19 @@ public class Ground : AnimationSpriteAddOn
     {
         if (groundObject != null)
         {
-            
+            visible = false;
         }
     }
 
     void Update()
     {
-        /*
-        if (Player.currentlyCrouched)
+        if (x < Player.playerX + 1920 && x > Player.playerX - 64 * 4)
         {
-            x -= (float)xSpeed * Player.xCrouchSpeed;
-            Player.xCrouchSpeed -= DesignerClass.playerCrouchSpeedDecrease;
-            if (Player.xCrouchSpeed < 0.5) Player.xCrouchSpeed = 0.5f;
+            visible = true;
         }
         else
         {
-            x -= (float)xSpeed;
-            Player.xCrouchSpeed = DesignerClass.playerCrouchStartingSpeed;
+            visible = false;
         }
-
-        xSpeed += DesignerClass.XSpeedUp;
-
-        /*
-        if (x + width < 0)
-        {
-            if (y >= DesignerClass.wHeight - height && spawnObstacle)
-            {
-                if (obstacle == 0)
-                {
-                    BlockObstacleSpawnEvent.Invoke();
-                    abilityToSpawnCooldown--;
-                }
-            }
-            else if (y >= DesignerClass.wHeight - height)
-            {
-                GroundSpawnEvent.Invoke();
-            }
-
-            LateDestroy();
-
-            if (abilityToSpawnCooldown == 0) spawnObstacle = false;
-        }
-
-        if (Hud.score % 100 == 1 && Hud.score > 80 && canSpawnObstacle)
-        {
-            spawnObstacle = true;
-            abilityToSpawnCooldown = 2;
-        }
-        */
     }
 }
