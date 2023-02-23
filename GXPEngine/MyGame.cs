@@ -89,7 +89,7 @@ public class MyGame : Game {
 
         if (hitSpike) ResetCurrentLevel();
         if (hitEnd) ResetCurrentLevel();
-        if (plus) LoadLevel("level1.tmx");
+        if (plus) LoadLevel("level1 backup.tmx");
         if (ControlClass.minus && minusReleased)
         {
             minusReleased = false;

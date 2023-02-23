@@ -21,12 +21,20 @@ public class EndPoint : AnimationSpriteAddOn
     {
         if (circleObject != null)
         {
-
+            visible = false;
         }
     }
 
     void Update()
     {
+        if (x < Player.playerX + 1920 && x > Player.playerX - 64 * 4)
+        {
+            visible = true;
+        }
+        else
+        {
+            visible = false;
+        }
 
     }
 }

@@ -22,27 +22,19 @@ public class Spike : AnimationSpriteAddOn
     {
         if (spikeObject != null)
         {
-
+            visible = false;
         }
     }
 
     void Update()
     {
-        /*
-        if (Player.currentlyCrouched)
+        if (x < Player.playerX + 1920 && x > Player.playerX - 64 * 4)
         {
-
-            x -= (float)xSpeed * Player.xCrouchSpeed;
-            Player.xCrouchSpeed -= DesignerClass.playerCrouchSpeedDecrease;
-            if (Player.xCrouchSpeed < 0.5) Player.xCrouchSpeed = 0.5f;
+            visible = true;
         }
         else
         {
-            x -= (float)xSpeed;
-            Player.xCrouchSpeed = DesignerClass.playerCrouchStartingSpeed;
+            visible = false;
         }
-
-        xSpeed += DesignerClass.XSpeedUp;
-        */
     }
 }
