@@ -14,6 +14,8 @@ public class ControlClass : GameObject
     static public bool right;
     static public bool jump;
     static public bool crouch;
+    static public bool plus;
+    static public bool minus;
 
     void Update()
     {
@@ -26,5 +28,7 @@ public class ControlClass : GameObject
         right = Input.GetKey(Key.D) || Input.GetKey(Key.RIGHT);
         jump = Input.GetKey(Key.SPACE);
         crouch = Input.GetKey(Key.K);
+        plus = Input.GetKey(Key.P);
+        minus = Input.GetKey(Key.R);
     }
 }
