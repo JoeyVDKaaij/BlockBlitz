@@ -15,7 +15,7 @@ public class Block : Sprite
     public event Action BlockDestroyEvent;
     private double xSpeed = DesignerClass.xStartingSpeed;
 
-    public Block(float pX, float pY, double pXSpeed) : base("colors.png", false, true)
+    public Block(float pX, float pY, double pXSpeed) : base(ArtistClass.blockFileName, false, true)
     {
         width = 64;
         height = 64;
