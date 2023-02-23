@@ -438,7 +438,7 @@ public class DesignerClass
     // If not changed you should hear the Goat simulator dance music.
     public static string[] levelSoundTrack = { "Menu rizz final.wav", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 0.75f;
+    public const float backgroundMusicVolume = 0.5f;
 
     public const float soundEffectVolume = 0.5f;
 
