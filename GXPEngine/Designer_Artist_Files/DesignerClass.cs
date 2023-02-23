@@ -47,12 +47,9 @@ public class DesignerClass
     // Note that reaching the end doesn't send you to the next level
     public static string startLevel =
     //"testmap.tmx";
-<<<<<<< HEAD
     "level1 backup.tmx";
-=======
-    "MainMenu.tmx";
+    //"MainMenu.tmx";
     //"level1.tmx";
->>>>>>> 3df5565b4299e8d447f29493f839e1ed2b0588ac
 
     // Position of the coin counter
     public const int coinCounterX = 50;
