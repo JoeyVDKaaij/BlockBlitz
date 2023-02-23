@@ -31,6 +31,10 @@ class Level : GameObject
 
         player = FindObjectOfType<Player>();
         if(player != null ) { AddChild(player); }
+
+        //y = (game.height - 128) - player.y; 
+        y = 128 - player.y + 500; 
+        //x = 128 + player.x;
     }
     //public void PlayerDeath()
     //{
@@ -67,17 +71,20 @@ class Level : GameObject
     }
     void Scrolling()
     {
-        int xBoundriesStart = 128;  //The screen boudries for scrolling
-        int xBoundriesEnd = game.width - (int)Player.playerXStartPosition + 128;  //The screen boudries for scrolling
+        int xBoundriesStart = (int)Player.playerXStartPosition;  //The screen boudries for scrolling
+        int xBoundriesEnd = 1720;  //The screen boudries for scrolling
         //int xBoundriesEnd = 128;  //The screen boudries for scrolling
-        int yBoundries = 128;  //The screen boudries for scrolling
+        int yBoundriesStart = 128;  //The screen boudries for scrolling
+        int yBoundriesEnd = 128;  //The screen boudries for scrolling
+
+
         if (player.x + x > game.width - xBoundriesEnd)
             x = (game.width - xBoundriesEnd) - player.x;
         if (player.x + x < xBoundriesStart)
             x = xBoundriesStart - player.x;
-        if (player.y + y > game.height - yBoundries)
-            y = (game.height - yBoundries) - player.y;
-        if (player.y + y < yBoundries)
-            y = yBoundries - player.y;
+        if (player.y + y > game.height - yBoundriesStart)
+            y = (game.height - yBoundriesStart) - player.y;
+        if (player.y + y < yBoundriesEnd)
+            y = yBoundriesEnd - player.y;
     }
 }
