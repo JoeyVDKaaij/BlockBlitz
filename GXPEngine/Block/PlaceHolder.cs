@@ -19,6 +19,11 @@ public class PlaceHolder : AnimationSpriteAddOn
     private int chosenOption;
     private float placeHolderX;
 
+    Sound blockSoundEffect = new Sound(DesignerClass.placeBlockSoundEffect);
+
+    public static bool blockPlacedDown = false;
+    public static int blockPlacedDownCoolDown = 10000;
+
     public PlaceHolder(string fileName, int colums, int rows, TiledObject placeHolderObject = null) : base(fileName, colums, rows, -1, false, false)
     {
         if (placeHolderObject != null)
@@ -46,6 +51,17 @@ public class PlaceHolder : AnimationSpriteAddOn
             visible = false;
         }
 
+        if (blockPlacedDown)
+        {
+            blockPlacedDownCoolDown--;
+        }
+
+        if (blockPlacedDownCoolDown == 0)
+        {
+            blockPlacedDown = false;
+            blockPlacedDownCoolDown = 10000;
+        }
+
         if (ControlClass.up && x < Player.playerX + game.width || ControlClass.down && x < Player.playerX + game.width || ControlClass.left && x < Player.playerX + game.width || ControlClass.right && x < Player.playerX + game.width)
         {
             if (ControlClass.up)
@@ -67,6 +83,12 @@ public class PlaceHolder : AnimationSpriteAddOn
             {
                 chosenOption = 3;
                 CheckBlock(chosenOption);
+            }
+
+            if (!blockPlacedDown)
+            {
+                blockSoundEffect.Play(false, 0, DesignerClass.placeBlockSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
+                blockPlacedDown = true;
             }
         }
     }

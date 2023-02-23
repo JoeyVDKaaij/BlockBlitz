@@ -35,6 +35,9 @@ public class MyGame : Game {
     public static bool plus = false;
     public static bool minusReleased = true;
 
+    //public static bool blockPlacedDown = false;
+    public static int blockPlacedDownCoolDown = 2;
+
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
         //playerData = new PlayerData();
