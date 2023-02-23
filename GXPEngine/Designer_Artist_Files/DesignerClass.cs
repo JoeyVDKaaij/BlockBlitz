@@ -16,8 +16,8 @@ public class DesignerClass
     public const int playerSpawnY = 0;
     public const int playerWidth = 50;
     public const int playerHeight = 50;
-    public const int playerJumpHeight = 11;
-    public const double playerGravity = 0.5;
+    public const int playerJumpHeight = 17;
+    public const double playerGravity = 1.0;
 
     // How fast the player goes for the first frame when the player crouches
     public const float playerCrouchStartingSpeed = 2;
@@ -38,10 +38,10 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-    public const double xStartingSpeed = 5;
+    public const double xStartingSpeed = 7;
 
     // How much faster the game goes per pixel each frame
-    public const double XSpeedUp = 0.0015;
+    public const double XSpeedUp = 0.0013;
 
     // Which level the game starts with
     // Note that reaching the end doesn't send you to the next level
@@ -173,9 +173,9 @@ public class DesignerClass
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
-                    { 0, 0, 0, 0, 0, 0, 0 },
-                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 1, 1, 0 },
                     { 0, 0, 1, 1, 1, 0, 0 },
+                    { 1, 1, 1, 0, 1, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 }
@@ -437,7 +437,7 @@ public class DesignerClass
     // If not changed you should hear the Goat simulator dance music.
     public static string[] levelSoundTrack = { "Menu rizz final.wav", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 0.2f;
+    public const float backgroundMusicVolume = 0.75f;
 
     public const float soundEffectVolume = 0.5f;
 

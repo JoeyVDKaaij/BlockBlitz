@@ -33,7 +33,7 @@ class Level : GameObject
         if(player != null ) { AddChild(player); }
 
         //y = (game.height - 128) - player.y; 
-        y = 128 - player.y + 500; 
+        y = 128 - player.y + 250; 
         //x = 128 + player.x;
     }
 

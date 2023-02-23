@@ -63,7 +63,7 @@ public class Player : AnimationSpriteAddOn
 
         playerX = x;
 
-        Animate(0.2f);
+        Animate(0.275f);
         //Collision c = MoveUntilCollision(xSpeed, ySpeed);
         Collision c = MoveUntilCollision(xSpeed, ySpeed);
 
