@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 public class DesignerClass
 {
     // Game Window Variables
-    public const int wWidth = 800;
-    public const int wHeight = 600;
-    public const bool fullScreen = false;
+    public const int wWidth = 1920;
+    public const int wHeight = 1080;
+    public const bool fullScreen = true;
 
     // Player Variable;
     public const int playerSpawnX = 100;
