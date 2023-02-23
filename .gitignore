@@ -5,3 +5,5 @@ GXPEngine/bin/Debug/lib
 GXPEngine/bin/Release
 GXPEngine/bin/Debug/GXPEngine.exe
 GXPEngine/bin/Debug/GXPEngine.pdb
+.pdb
+.exe
