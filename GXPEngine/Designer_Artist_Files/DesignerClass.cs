@@ -9,9 +9,9 @@ public class DesignerClass
     // Game Window Variables
     public const int wWidth = 800;
     public const int wHeight = 600;
-    public const bool fullScreen = false;
+    public const bool fullScreen = true;
 
-    // Player Variable
+    // Player Variable;
     public const int playerSpawnX = 100;
     public const int playerSpawnY = 0;
     public const int playerWidth = 50;
@@ -20,16 +20,16 @@ public class DesignerClass
     public const double playerGravity = 0.5;
 
     // How fast the player goes for the first frame when the player crouches
-    public const float playerCrouchStartingSpeed = 4;
+    public const float playerCrouchStartingSpeed = 2;
 
     // How much the speed decreases per frame. Keep the f at the end for it to work
-    public const float playerCrouchSpeedDecrease = 0.2f;
+    public const float playerCrouchSpeedDecrease = 0.1f;
 
     // Will the player sit still after crouching for a long enough time
     public const bool crouchStill = false;
 
     // Minimum speed that the player slides (keep the f at the end)
-    public const float crouchMinSpeed = 0.1f;
+    public const float crouchMinSpeed = 1.5f;
 
     // Ground Variables
     public const int amountOfObstacles = 3;
@@ -38,10 +38,10 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-    public const double xStartingSpeed = 2;
+    public const double xStartingSpeed = 5;
 
     // How much faster the game goes per pixel each frame
-    public const double XSpeedUp = 0.001;
+    public const double XSpeedUp = 0.0015;
 
     // Which level the game starts with
     // Note that reaching the end doesn't send you to the next level
@@ -89,23 +89,23 @@ public class DesignerClass
             {
             //Obstacle 1
                 {
-                    { 0, 0, 0, 1, 0, 0, 0 },
-                    { 0, 0, 0, 1, 0, 0, 0 },
-                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 1, 0, 0 },
+                    { 0, 0, 0, 0, 1, 0, 0 },
+                    { 1, 1, 1, 1, 1, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
-                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 1, 1, 1, 1, 1, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
-                    { 1, 1, 1, 1, 0, 0, 0 },
-                    { 0, 0, 0, 0, 0, 0, 0 },
-                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 1, 1, 0, 0 },
+                    { 1, 1, 0, 1, 1, 0, 0 },
+                    { 1, 1, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
@@ -166,15 +166,15 @@ public class DesignerClass
                 },
                 {
                     { 1, 0, 0, 0, 0, 0, 0 },
-                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 0, 0, 0, 0 },
                     { 1, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
-                    { 0, 0, 0, 0, 1, 1, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 1, 1, 1, 0, 0 },
-                    { 1, 1, 1, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 }
@@ -215,14 +215,169 @@ public class DesignerClass
                 {
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 1, 0, 0, 0 },
+                    { 1, 1, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+            //Obstacle 6
+                {
+                    { 1, 1, 1, 1, 1, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
                     { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 1, 0, 0, 0, 0, 0 },
+                    { 1, 1, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 1, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 1, 0, 0 },
+                    { 0, 1, 1, 1, 1, 0, 0 },
+                    { 1, 1, 1, 1, 1, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+            //Obstacle 7
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 1, 1, 0, 0, 0, 0 },
-                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 1, 0, 0, 1, 0, 0, 0 },
+                    { 1, 0, 0, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+            //Obstacle 8
+                {
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 0, 0, 1, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+            //Obstacle 9
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 1, 0, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 0, 0, 0 },
+                    { 0, 0, 0, 1, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+            //Obstacle 10
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 0, 0, 0, 0, 1, 0 },
+                    { 1, 1, 1, 1, 1, 1, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 1, 1, 1, 0 },
+                    { 1, 1, 0, 1, 0, 1, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
@@ -234,13 +389,45 @@ public class DesignerClass
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
-                    { 0, 0, 0, 0, 1, 1, 0 },
-                    { 0, 0, 1, 1, 1, 0, 0 },
-                    { 1, 1, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 0, 0, 1, 1, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                }
+            },
+            {
+            //Obstacle 11
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 1, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 1, 1, 0, 0 },
+                    { 0, 0, 0, 0, 1, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 }
+                },
+                {
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
+                    { 0, 0, 1, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 }
             }
+
         };
 
 
@@ -249,12 +436,18 @@ public class DesignerClass
     // If not changed you should hear the Goat simulator dance music.
     public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 1;
+    public const float backgroundMusicVolume = 0f;
 
-    public const float soundEffectVolume = 1;
+    public const float soundEffectVolume = 0f;
 
-    public const string jumpSoundEffect = "ping.wav";
+    public static string[] jumpSoundEffect = { "ping.wav", "ping.wav", "ping.wav" };
 
     public const string slideSoundEffect = "ping.wav";
+
+    public const string grabCoinSoundEffect = "ping.wav";
+
+    public const string deathSoundEffect = "ping.wav";
+    
+    public const string placeBlockSoundEffect = "ping.wav";
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }
