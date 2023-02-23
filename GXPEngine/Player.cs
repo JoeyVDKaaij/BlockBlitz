@@ -81,7 +81,7 @@ public class Player : AnimationSpriteAddOn
             if (ControlClass.jump)
             {
                 Sound jumpSoundEffect = new Sound(DesignerClass.jumpSoundEffect[rand.Next(3)]);
-                soundEffectSC = jumpSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                soundEffectSC = jumpSoundEffect.Play(false, 0, DesignerClass.jumpSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
                 y -= 1;
                 ySpeed = -DesignerClass.playerJumpHeight;
                 SetCycle(ArtistClass.playerJumpFrame - 1, 1);
@@ -107,9 +107,9 @@ public class Player : AnimationSpriteAddOn
             }
             */
 
-            if (!(c.other is Block) && c.other.x > x + 10 && c.other.y < y + 86 && c.other.y > y && !currentlyCrouched || c.other is Block && c.other.x > x + 10 && c.other.y < y && !currentlyCrouched)
+            if (!(c.other is Coin) && !(c.other is EndPoint) && !(c.other is Block) && c.other.x > x + 10 && c.other.y < y + 86 && c.other.y > y && !currentlyCrouched || !(c.other is Coin) && !(c.other is EndPoint) && c.other is Block && c.other.x > x + 10 && c.other.y < y && !currentlyCrouched)
             {
-                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.deathSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
                 MyGame.hitSpike = true;
             }
 
@@ -118,7 +118,7 @@ public class Player : AnimationSpriteAddOn
             {
                 if (!currentlyCrouched)
                 {
-                    soundEffectSC = crouchSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                    soundEffectSC = crouchSoundEffect.Play(false, 0, DesignerClass.slideSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
                     currentlyCrouched = true;
                     height = height / 2;
                     y += height / 2;
@@ -136,7 +136,7 @@ public class Player : AnimationSpriteAddOn
             // If it's something else continue walking
             if (c.other is Spike)
             {
-                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                soundEffectSC = deadSoundEffect.Play(false, 0, DesignerClass.deathSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
                 MyGame.hitSpike = true;
             }
             else if (c.other is EndPoint)
@@ -145,7 +145,7 @@ public class Player : AnimationSpriteAddOn
             }
             else if (c.other is Coin)
             {
-                soundEffectSC = grabTheCoinSoundEffect.Play(false, 0, DesignerClass.soundEffectVolume, 0);
+                soundEffectSC = grabTheCoinSoundEffect.Play(false, 0, DesignerClass.grabCoinSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
                 c.other.LateDestroy();
                 Hud.coinCounter++;
             }

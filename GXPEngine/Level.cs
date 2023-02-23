@@ -52,7 +52,7 @@ class Level : GameObject
         int xBoundriesEnd = 1720;  //The screen boudries for scrolling
         //int xBoundriesEnd = 128;  //The screen boudries for scrolling
         int yBoundriesStart = 500;  //The screen boudries for scrolling
-        int yBoundriesEnd = 128;  //The screen boudries for scrolling
+        int yBoundriesEnd = 400;  //The screen boudries for scrolling
 
 
         if (player.x + x > game.width - xBoundriesEnd)

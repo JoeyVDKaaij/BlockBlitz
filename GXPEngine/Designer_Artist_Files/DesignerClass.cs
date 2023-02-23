@@ -443,13 +443,19 @@ public class DesignerClass
     public const float soundEffectVolume = 0.5f;
 
     public static string[] jumpSoundEffect = { "Jumping sound 1.wav", "Jumping sound 2.wav", "Jumping sound 3.wav" };
+    public const float jumpSoundEffectVolume = 1f;
 
     public const string slideSoundEffect = "Slide.wav";
+    public const float slideSoundEffectVolume = 1f;
 
     public const string grabCoinSoundEffect = "Coin collect.wav";
+    public const float grabCoinSoundEffectVolume = 1f;
 
     public const string deathSoundEffect = "Death.wav";
-    
+    public const float deathSoundEffectVolume = 1f;
+
     public const string placeBlockSoundEffect = "Block placement.wav";
+    public const float placeBlockSoundEffectVolume = 1f;
+
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }
