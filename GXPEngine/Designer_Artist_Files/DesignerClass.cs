@@ -9,7 +9,7 @@ public class DesignerClass
     // Game Window Variables
     public const int wWidth = 1920;
     public const int wHeight = 1080;
-    public const bool fullScreen = true;
+    public const bool fullScreen = false;
 
     // Player Variable;
     public const int playerSpawnX = 100;
@@ -47,7 +47,8 @@ public class DesignerClass
     // Note that reaching the end doesn't send you to the next level
     public static string startLevel =
     //"testmap.tmx";
-    "level1.tmx";
+    "MainMenu.tmx";
+    //"level1.tmx";
 
     // Position of the coin counter
     public const int coinCounterX = 50;
@@ -434,11 +435,11 @@ public class DesignerClass
 
     // Add the songs for the title screen, level and possibly the end screen in that order from left to right.
     // If not changed you should hear the Goat simulator dance music.
-    public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
+    public static string[] levelSoundTrack = { "Menu rizz final.wav", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
 
     public const float backgroundMusicVolume = 0.75f;
 
-    public const float soundEffectVolume = 1f;
+    public const float soundEffectVolume = 0.5f;
 
     public static string[] jumpSoundEffect = { "Jumping sound 1.wav", "Jumping sound 2.wav", "Jumping sound 3.wav" };
 

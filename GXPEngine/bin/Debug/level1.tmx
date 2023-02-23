@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="1000" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="48" nextobjectid="11186">
+=======
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="1000" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="21" nextobjectid="9307">
+>>>>>>> origin/beta
  <tileset firstgid="1" name="square" tilewidth="64" tileheight="64" tilecount="1" columns="1">
   <image source="square.png" width="64" height="64"/>
  </tileset>
@@ -87,6 +91,7 @@
  <imagelayer id="17" name="Image Layer 4" offsetx="3218.91" offsety="1804.12">
   <image source="choose block.png" width="989" height="256"/>
  </imagelayer>
+<<<<<<< HEAD
  <imagelayer id="30" name="Obstacle 0" offsetx="4186.67" offsety="1788">
   <image source="../../../../../../../Users/alexa/Downloads/Obstacle 0 1.png" width="440" height="315"/>
  </imagelayer>
@@ -157,6 +162,9 @@
   <image source="../../../../../../../Users/alexa/Downloads/Obstacle 10 1.png" width="448" height="274"/>
  </imagelayer>
  <objectgroup id="5" name="Ground">
+=======
+ <objectgroup id="5" name="Ground" locked="1">
+>>>>>>> origin/beta
   <object id="6" class="Ground" gid="5" x="128" y="2368" width="64" height="64"/>
   <object id="986" class="Ground" gid="5" x="0" y="2368" width="64" height="64"/>
   <object id="7" class="Ground" gid="5" x="192" y="2368" width="64" height="64"/>
@@ -10832,7 +10840,11 @@
   <object id="9049" class="Coin" gid="49" x="34432" y="2624" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="990" class="Player" x="64" y="2112" width="128" height="128"/>
+  <object id="990" class="Player" x="128" y="2112" width="128" height="128">
+   <properties>
+    <property name="Menu" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="1000" height="50">
   <data encoding="csv">
