@@ -9,9 +9,9 @@ public class DesignerClass
     // Game Window Variables
     public const int wWidth = 800;
     public const int wHeight = 600;
-    public const bool fullScreen = false;
+    public const bool fullScreen = true;
 
-    // Player Variable
+    // Player Variable;
     public const int playerSpawnX = 100;
     public const int playerSpawnY = 0;
     public const int playerWidth = 50;
@@ -215,13 +215,13 @@ public class DesignerClass
                 {
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 1, 0, 0, 0 },
-                    { 1, 0, 0, 0, 0, 0, 0 },
+                    { 1, 1, 1, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
                 },
                 {
                     { 0, 0, 0, 0, 0, 0, 0 },
-                    { 0, 1, 1, 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 1, 1, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 },
                     { 0, 0, 0, 0, 0, 0, 0 }
