@@ -41,7 +41,7 @@ public class DesignerClass
     public const double xStartingSpeed = 7;
 
     // How much faster the game goes per pixel each frame
-    public const double XSpeedUp = 0.0013;
+    public const double XSpeedUp = 0.0015;
 
     // Which level the game starts with
     // Note that reaching the end doesn't send you to the next level
