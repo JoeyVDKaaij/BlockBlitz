@@ -16,5 +16,7 @@ public class ArtistClass
 
     public const string blockFileName = "colors.png";
 
+    public const string mainMenuFileName = "MainMenu.png";
+
     // Change the height and position in DesignerClass.cs
 }
