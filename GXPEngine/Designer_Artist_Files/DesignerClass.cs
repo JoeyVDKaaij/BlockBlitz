@@ -434,7 +434,7 @@ public class DesignerClass
 
     // Add the songs for the title screen, level and possibly the end screen in that order from left to right.
     // If not changed you should hear the Goat simulator dance music.
-    public static string[] levelSoundTrack = { "Goat_Simulator_Dance_Song.mp3", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
+    public static string[] levelSoundTrack = { "Menu rizz final.wav", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
 
     public const float backgroundMusicVolume = 0.2f;
 
