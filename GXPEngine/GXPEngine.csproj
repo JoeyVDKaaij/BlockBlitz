@@ -95,6 +95,7 @@
     <Compile Include="GXPEngine\SoLoud\Soloud.cs" />
     <Compile Include="GXPEngine\SoLoud\SoloudSoundSystem.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="Virus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

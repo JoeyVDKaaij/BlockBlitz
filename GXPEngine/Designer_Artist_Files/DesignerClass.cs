@@ -19,6 +19,9 @@ public class DesignerClass
     public const int playerJumpHeight = 17;
     public const double playerGravity = 1.0;
 
+    public const int virusWidth = 200;
+    public const int virusHeight = 1080;
+
     // How fast the player goes for the first frame when the player crouches
     public const float playerCrouchStartingSpeed = 2;
 
@@ -38,7 +41,7 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-    public const double xStartingSpeed = 7;
+    public const double xStartingSpeed = 5;
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.0015;
