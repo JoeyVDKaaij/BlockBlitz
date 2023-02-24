@@ -41,7 +41,7 @@ public class MyGame : Game {
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
         //playerData = new PlayerData();
-        LoadLevel(DesignerClass.startLevel);
+        LoadLevel(DesignerClass.startLevel, 0);
         OnAfterStep += CheckLoadLevel;
 
         // Initialize the classes
