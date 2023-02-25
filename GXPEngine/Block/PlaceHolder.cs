@@ -3,10 +3,12 @@ using System;
 using System.Diagnostics.Contracts;
 using System.Diagnostics.Eventing.Reader;
 using System.Runtime.InteropServices;
+using System.Threading;
 using TiledMapParser;
 
 public class PlaceHolder : AnimationSpriteAddOn
 {
+    public static bool resetblock = false;
     public event Action PlaceHolderReplaceWithBlockEvent;
     public event Action PlaceHolderDestroyEvent;
     private double xSpeed = DesignerClass.xStartingSpeed;
@@ -97,7 +99,7 @@ public class PlaceHolder : AnimationSpriteAddOn
     {
         if (DesignerClass.blocks[obstacle, pChosenOption, row - 1, column - 1] == 1)
         {
-            ReplacePlaceHolderWithBlock();
+            ReplacePlaceHolderWithBlock(resetblock);
         }
         else
         {
@@ -105,10 +107,13 @@ public class PlaceHolder : AnimationSpriteAddOn
         }
     }
 
-    void ReplacePlaceHolderWithBlock()
+    void ReplacePlaceHolderWithBlock(bool pResetBlock)
     {
-        Block temp = new Block(x, y, xSpeed);
-        parent.AddChild(temp);
+        if (!pResetBlock)
+        {
+            Block temp = new Block(x, y, xSpeed);
+            parent.AddChild(temp);
+        }
     }
 
     void DeletePlaceHolder()
