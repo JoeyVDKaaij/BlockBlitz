@@ -19,6 +19,9 @@ public class DesignerClass
     public const int playerJumpHeight = 17;
     public const double playerGravity = 1.0;
 
+    public const int virusWidth = 200;
+    public const int virusHeight = 1080;
+
     // How fast the player goes for the first frame when the player crouches
     public const float playerCrouchStartingSpeed = 2;
 
@@ -38,7 +41,7 @@ public class DesignerClass
     public const int groundCountDefault = 3;
 
     // Set the starting speed per pixel
-    public const double xStartingSpeed = 7;
+    public const double xStartingSpeed = 5;
 
     // How much faster the game goes per pixel each frame
     public const double XSpeedUp = 0.0015;
@@ -438,18 +441,24 @@ public class DesignerClass
     // If not changed you should hear the Goat simulator dance music.
     public static string[] levelSoundTrack = { "Menu rizz final.wav", "Background music full version.wav", "Goat_Simulator_Dance_Song.mp3" };
 
-    public const float backgroundMusicVolume = 0.75f;
+    public const float backgroundMusicVolume = 0.5f;
 
     public const float soundEffectVolume = 0.5f;
 
     public static string[] jumpSoundEffect = { "Jumping sound 1.wav", "Jumping sound 2.wav", "Jumping sound 3.wav" };
+    public const float jumpSoundEffectVolume = 1f;
 
     public const string slideSoundEffect = "Slide.wav";
+    public const float slideSoundEffectVolume = 1f;
 
     public const string grabCoinSoundEffect = "Coin collect.wav";
+    public const float grabCoinSoundEffectVolume = 1f;
 
     public const string deathSoundEffect = "Death.wav";
-    
+    public const float deathSoundEffectVolume = 1f;
+
     public const string placeBlockSoundEffect = "Block placement.wav";
+    public const float placeBlockSoundEffectVolume = 1f;
+
     // Change the image, sprite and animationsprite in ArtistClass.cs
 }

@@ -3,10 +3,12 @@ using System;
 using System.Diagnostics.Contracts;
 using System.Diagnostics.Eventing.Reader;
 using System.Runtime.InteropServices;
+using System.Threading;
 using TiledMapParser;
 
 public class PlaceHolder : AnimationSpriteAddOn
 {
+    public static bool resetblock = false;
     public event Action PlaceHolderReplaceWithBlockEvent;
     public event Action PlaceHolderDestroyEvent;
     private double xSpeed = DesignerClass.xStartingSpeed;
@@ -18,6 +20,11 @@ public class PlaceHolder : AnimationSpriteAddOn
 
     private int chosenOption;
     private float placeHolderX;
+
+    Sound blockSoundEffect = new Sound(DesignerClass.placeBlockSoundEffect);
+
+    public static bool blockPlacedDown = false;
+    public static int blockPlacedDownCoolDown = 10000;
 
     public PlaceHolder(string fileName, int colums, int rows, TiledObject placeHolderObject = null) : base(fileName, colums, rows, -1, false, false)
     {
@@ -46,6 +53,17 @@ public class PlaceHolder : AnimationSpriteAddOn
             visible = false;
         }
 
+        if (blockPlacedDown)
+        {
+            blockPlacedDownCoolDown--;
+        }
+
+        if (blockPlacedDownCoolDown == 0)
+        {
+            blockPlacedDown = false;
+            blockPlacedDownCoolDown = 10000;
+        }
+
         if (ControlClass.up && x < Player.playerX + game.width || ControlClass.down && x < Player.playerX + game.width || ControlClass.left && x < Player.playerX + game.width || ControlClass.right && x < Player.playerX + game.width)
         {
             if (ControlClass.up)
@@ -68,6 +86,12 @@ public class PlaceHolder : AnimationSpriteAddOn
                 chosenOption = 3;
                 CheckBlock(chosenOption);
             }
+
+            if (!blockPlacedDown)
+            {
+                blockSoundEffect.Play(false, 0, DesignerClass.placeBlockSoundEffectVolume * DesignerClass.soundEffectVolume, 0);
+                blockPlacedDown = true;
+            }
         }
     }
 
@@ -75,7 +99,7 @@ public class PlaceHolder : AnimationSpriteAddOn
     {
         if (DesignerClass.blocks[obstacle, pChosenOption, row - 1, column - 1] == 1)
         {
-            ReplacePlaceHolderWithBlock();
+            ReplacePlaceHolderWithBlock(resetblock);
         }
         else
         {
@@ -83,10 +107,13 @@ public class PlaceHolder : AnimationSpriteAddOn
         }
     }
 
-    void ReplacePlaceHolderWithBlock()
+    void ReplacePlaceHolderWithBlock(bool pResetBlock)
     {
-        Block temp = new Block(x, y, xSpeed);
-        parent.AddChild(temp);
+        if (!pResetBlock)
+        {
+            Block temp = new Block(x, y, xSpeed);
+            parent.AddChild(temp);
+        }
     }
 
     void DeletePlaceHolder()

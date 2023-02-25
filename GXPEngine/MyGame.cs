@@ -35,10 +35,13 @@ public class MyGame : Game {
     public static bool plus = false;
     public static bool minusReleased = true;
 
+    //public static bool blockPlacedDown = false;
+    public static int blockPlacedDownCoolDown = 2;
+
     public MyGame() : base(DesignerClass.wWidth, DesignerClass.wHeight, DesignerClass.fullScreen, false, -1, -1, false)
 	{
         //playerData = new PlayerData();
-        LoadLevel(DesignerClass.startLevel);
+        LoadLevel(DesignerClass.startLevel, 0);
         OnAfterStep += CheckLoadLevel;
 
         // Initialize the classes
@@ -87,8 +90,16 @@ public class MyGame : Game {
 		}
         */
 
-        if (hitSpike) ResetCurrentLevel();
-        if (hitEnd) ResetCurrentLevel();
+        if (hitSpike)
+        {
+            PlaceHolder.resetblock = true;
+            ResetCurrentLevel(); 
+        }
+        if (hitEnd)
+        {
+            PlaceHolder.resetblock = true; 
+            LoadLevel("MainMenu.tmx");
+        }
         if (plus) LoadLevel("level1 backup.tmx");
         if (ControlClass.minus && minusReleased)
         {
@@ -187,6 +198,7 @@ public class MyGame : Game {
             if (levelToLoad != "EndScreen.tmx" && levelToLoad != "MainMenu.tmx")
             {
                 AddChild(new Hud());
+                AddChild(new Virus());
             }
             else
             {
@@ -208,6 +220,7 @@ public class MyGame : Game {
         levelToLoad = filename;
         currentLevel = filename;
         plus = false;
+        PlaceHolder.resetblock = false;
     }
 
     public void ResetCurrentLevel(int currentLevelSoundTrack = 1)
@@ -216,6 +229,7 @@ public class MyGame : Game {
         //playerData.Reset();
         AddChild(new Level(currentLevel));
         AddChild(new Hud());
+        AddChild(new Virus());
         AddChild(new ControlClass());
         hitSpike = false;
         hitEnd = false;
@@ -225,6 +239,7 @@ public class MyGame : Game {
             backgroundMusicSC.Stop();
         Sound backgroundMusic = new Sound(DesignerClass.levelSoundTrack[currentLevelSoundTrack]);
         backgroundMusicSC = backgroundMusic.Play(false, 0, DesignerClass.backgroundMusicVolume, 0);
+        PlaceHolder.resetblock = false;
     }
 
     static void Main()                          // Main() is the first method that's called when the program is run
